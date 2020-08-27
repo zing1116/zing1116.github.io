@@ -98,6 +98,7 @@ h2 {
 	font-size: 22px;
 	line-height: 30px;
 	letter-spacing: 1px;
+	word-wrap: break-word;
 }
 @media (max-width:768px) {
 	h2 {
