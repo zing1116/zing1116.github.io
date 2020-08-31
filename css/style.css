@@ -798,6 +798,11 @@ ul.sb-submenu li a:hover {
 	margin: 0;
 	list-style-type: none;
 }
+
+.list-2 {
+	 margin-left: 20px;
+}
+
 /* Submenu parent item caret */
 span.sb-caret {
 	width: 0;

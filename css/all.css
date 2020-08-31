@@ -812,6 +812,11 @@ ul.sb-submenu li a:hover {
 	margin: 0;
 	list-style-type: none;
 }
+
+.list-2 {
+	 margin-left: 20px;
+}
+
 /* Submenu parent item caret */
 span.sb-caret {
 	width: 0;
@@ -3540,4 +3545,32 @@ pre .clojure .title {
 }
 pre .deletion {
   color: #dc322f;
+}
+.category-list {
+  font-size: 0.9em;
+  padding: 3px 3px;
+  margin: 0;
+}
+.category-list .category-list-count {
+  margin-left: 8px;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+  font-size: 0.8em;
+}
+.category-list .category-list-count:before {
+  content: '(';
+}
+.category-list .category-list-count:after {
+  content: ')';
+}
+ul,
+ol,
+dl {
+  list-style: none;
+}
+ul,
+ol,
+dl {
+  margin-left: -10px;
 }
