@@ -50,12 +50,14 @@
     <script src="/js/html5shiv.min.js"></script>
     <script src="/js/respond.min.js"></script>
     <![endif]-->
+    <script src='//unpkg.com/valine/dist/Valine.min.js'></script>
 
   
   
   
 
   <style>.col-md-8.col-md-offset-2.opening-statement img{display:none;}</style>
+
 </head>
 
 <!--
@@ -216,6 +218,18 @@
       		
             <div class="clearfix"></div>
             <hr class="nogutter">
+            <div id="vcomments"></div>
+    <script>
+        new Valine({
+            el: '#vcomments',
+            appId: '2WRbIT7CsRl9rgDb9PQIMh5W-gzGzoHsz',
+            appKey: 'p3GN2KpIbidsz6TreMXVSH2o',
+            placeholder: '有什么想法？',
+            visitor: true,
+            avatar: 'wavatar'
+        })
+    </script>
+    </div>
         </div>
         <nav class="m-pagination col-md-8 col-md-offset-2 col-sm-24" role="pagination">
     
@@ -279,8 +293,7 @@
   */
 
 </script>
-</div>
-    </div>
+</div> 
 </section>
 
 
