@@ -17,7 +17,7 @@
 <!--<![endif]-->
 
 <head>
-  <title>My New Post1 | ZING&#39;S BLOG</title>
+  <title>Category: ナツメカズキ | ZING&#39;S BLOG</title>
   <!-- Meta data -->
     <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" >
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
@@ -61,7 +61,7 @@
 </head>
 
 <!--
-<body class="post-template">
+<body class="home-template">
 -->
 <body id="index" class="lightnav animsition">
 
@@ -109,7 +109,7 @@
 
                 <a class="sb-toggle-submenu">Categories<span class="sb-caret"></span></a>
                 <ul class="sb-submenu">
-                    <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/bbb/">bbb</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/bbb/zzz/">zzz</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/hexo/">hexo</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/hexo/hello/">hello</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/hexo/zzz/">zzz</a></li></ul></li></ul> 
+                    <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/hexo/">hexo</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/hexo/hello/">hello</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%BC%AB%E7%94%BB%E8%87%AA%E6%B1%89%E5%8C%96/">漫画自汉化</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%BC%AB%E7%94%BB%E8%87%AA%E6%B1%89%E5%8C%96/%E3%83%8A%E3%83%84%E3%83%A1%E3%82%AB%E3%82%BA%E3%82%AD/">ナツメカズキ</a></li></ul></li></ul> 
                 </ul>
             </li>
             
@@ -195,104 +195,69 @@
         <!-- ============================ Header & Logo bar =========================== -->
 
 
-      
-<section id="intro">
-    <div class="container">
-        <div class="row col-md-offset-2">
-            <div class="col-md-8">
-    			<span class="post-meta">
-      <time datetime="2020-08-30T08:54:54.000Z" itemprop="datePublished">
-          2020-08-30
-      </time>
-    
-    
-    | 
-    <a href='/tags/hexo/'>hexo</a>
-    
-    
-</span>
-                <h1>My New Post1</h1>
+      <!-- ============================ Hero Image =========================== -->
+
+<section id="hero" class="scrollme">
+    <div class="container-fluid element-img" style="background: url(/img/cover.JPG) no-repeat center center fixed;background-size: cover">
+        <div class="row">
+            <div class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-8 col-md-offset-2 vertical-align cover boost text-center">
+                <div class="center-me animateme" data-when="exit" data-from="0" data-to="0.6" data-opacity="0" data-translatey="100">
+                    <div>
+                        
+                        <h2>FIND IT FLOATING IN MY <span>STATIC</span> DREAM.</h2>
+                        <p></p>
+                        
+                        <h2></h2>
+                        <p>まずは人間として生きて，明日の楽しみ数えて。</p>
+                        
+
+                    </div>
+                </div>
             </div>
+            <!-- // .col-md-12 -->
         </div>
-        <div class="col-md-8 col-md-offset-2">
-      		
-            <div class="clearfix"></div>
-            <hr class="nogutter">
-            <div id="vcomments"></div>
-    <script>
-        new Valine({
-            el: '#vcomments',
-            appId: '2WRbIT7CsRl9rgDb9PQIMh5W-gzGzoHsz',
-            appKey: 'p3GN2KpIbidsz6TreMXVSH2o',
-            placeholder: '有什么想法？',
-            visitor: true,
-            avatar: 'wavatar'
-        })
-    </script>
-
-        </div>
-        <nav class="m-pagination col-md-8 col-md-offset-2 col-sm-24" role="pagination">
-    
-    
-    <a class="pull-right" href="/2020/08/30/My-New-Post/">
-        My New Post →
-    </a>
-    
-</nav>
-
-        <div class="col-md-8 col-md-offset-2 col-sm-24"><script type="text/javascript">
-  /**
-   * 搜狐畅言
-   */
-
-  /*
-  document.write('<div id="SOHUCS" sid="' + window.location.pathname.slice(1) + '" ></div>');
-
-  window.onload = function () {
-    (function () {
-      var appid = 'cytXXXX';
-      var conf = 'prod_xxxxxxxxxxxxxxxxx';
-      var width = window.innerWidth || document.documentElement.clientWidth;
-      var loadJs = function (d, a, id) {
-        var c = document.getElementsByTagName("head")[0] || document.head || document.documentElement;
-        var b = document.createElement("script");
-        b.setAttribute("type", "text/javascript");
-        b.setAttribute("charset", "UTF-8");
-        b.setAttribute("src", d);
-        if (id) {
-          b.setAttribute("id", id);
-        }
-        if (typeof a === "function") {
-          if (window.attachEvent) {
-            b.onreadystatechange = function () {
-              var e = b.readyState;
-              if (e === "loaded" || e === "complete") {
-                b.onreadystatechange = null;
-                a()
-              }
-            }
-          } else {
-            b.onload = a
-          }
-        }
-        c.appendChild(b)
-      };
-
-      loadJs("https://changyan.sohu.com/upload/changyan.js", function () {
-        window.changyan.api.config({
-          appid: appid,
-          conf: conf
-        })
-      });
-    })();
-  }
-  */
-
-</script>
-</div> 
+        <div class="herofade beige-dk"></div>
+    </div>
 </section>
 
+<!-- Height spacing helper -->
+<div class="heightblock"></div>
+<!-- // End height spacing helper -->
 
+<!-- ============================ END Hero Image =========================== -->
+
+
+
+
+<section id="services">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-10 col-md-offset-1">
+                <div class="row boxes">
+                    
+                    
+                        
+                        
+                        <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3 wow fadeInUp" data-wow-delay="0.3s">
+                            
+                              <h4 class="title"><a href="/2020/02/13/bms/">バイ·マイ·サイド play2.5</a></h4>
+                            
+                            <p><time datetime="2020-02-13T12:06:56.000Z"><a href="/2020/02/13/bms/">2020-02-13</a></time></p>
+                        </div>
+                    
+                </div>
+            </div>    
+        </div>
+    </div>
+</section> 
+
+<section id="statement">
+    <div class="container text-center wow fadeInUp" data-wow-delay="0.5s">
+        <div class="row">
+            <p>LIVE AND LEARN.</p>
+        </div>
+    </div>
+</section>
       
 <!-- ============================ Footer =========================== -->
 
