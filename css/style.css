@@ -3151,7 +3151,7 @@ footer .footer-top{
 }
 footer .copy {
 	float: left;
-	margin-top: 5px;
+	margin-top: -15px;
 }
 footer .copy p {
 	font-size: 12px;
