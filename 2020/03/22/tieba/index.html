@@ -57,7 +57,6 @@
   
 
   <style>.col-md-8.col-md-offset-2.opening-statement img{display:none;}</style>
-
 </head>
 
 <!--
@@ -174,8 +173,6 @@
                             <li><a href="https://github.com/zing1116" title="Github" target="_blank"><i class="icon-github"></i></a></li>
                             
                             
-                            <li><a href="https://twitter.com/" title="Twitter" target="_blank"><i class="icon-twitter"></i></a></li>
-                            
                             
                             <li><a href="https://www.facebook.com/" title="Facebook" target="_blank"><i class="icon-facebook"></i></a></li>
                             
@@ -204,7 +201,22 @@
 
       
 <section id="intro">
+    <div class="ttoc">
+    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%A6%82%E8%BF%B0"><span class="toc-number">1.</span> <span class="toc-text">概述</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%8E%AF%E5%A2%83%E5%8F%8A%E6%B6%89%E5%8F%8A%E5%BA%93"><span class="toc-number">1.1.</span> <span class="toc-text">环境及涉及库</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%86%85%E5%AE%B9"><span class="toc-number">1.2.</span> <span class="toc-text">内容</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%A1%B5%E9%9D%A2%E8%8E%B7%E5%8F%96"><span class="toc-number">2.</span> <span class="toc-text">页面获取</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%9B%AE%E6%A0%87%E6%8F%90%E5%8F%96"><span class="toc-number">3.</span> <span class="toc-text">目标提取</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%9B%AE%E6%A0%87%E4%BF%9D%E5%AD%98"><span class="toc-number">4.</span> <span class="toc-text">目标保存</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%A4%9A%E9%A1%B5%E7%88%AC%E5%8F%96"><span class="toc-number">5.</span> <span class="toc-text">多页爬取</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%A6%82%E6%9E%9C%E7%94%A8urlopen%E2%80%94%E2%80%94"><span class="toc-number">6.</span> <span class="toc-text">如果用urlopen——</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%99%84%E5%BD%95"><span class="toc-number">7.</span> <span class="toc-text">附录</span></a></li></ol>
+
+    <div class="tt">
+    <a href="javascript:window.scrollTo(0, 0);">TOP</a>
+    </br>
+    <a href="javascript:window.scrollTo(0, document.body.scrollHeight);">BOTTOM</a>
+    </br>
+    <a href="javascript:window.history.back();">BACK</a>
+    </div>
+
+    </div>
+
+
     <div class="container">
+    
         <div class="row col-md-offset-2">
             <div class="col-md-8">
     			<span class="post-meta">
@@ -326,7 +338,7 @@
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">t=getHtml(<span class="string">&#x27;https://tieba.baidu.com/p/6520552534&#x27;</span>,headers)</span><br><span class="line">print(t)</span><br></pre></td></tr></table></figure>
 
 <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;结果如下：<br><img src="https://img-blog.csdnimg.cn/20200322203209320.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MjQxODU1OQ==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;嗯嗯，没问题。<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
-<h1 id="附录"><a href="#附录" class="headerlink" title="附录"></a>附录</h1><p>整合后的代码如下：<br><em>（这是运用<code>requests</code>库版本的，要用<code>urllib</code>库就只用将<code>getHtml</code>按上面的方式改写即可）</em></p>
+<h2 id="附录"><a href="#附录" class="headerlink" title="附录"></a>附录</h2><p>整合后的代码如下：<br><em>（这是运用<code>requests</code>库版本的，要用<code>urllib</code>库就只用将<code>getHtml</code>按上面的方式改写即可）</em></p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> requests</span><br><span class="line"><span class="keyword">import</span> time</span><br><span class="line"><span class="keyword">import</span> re</span><br><span class="line"></span><br><span class="line">headers=&#123;</span><br><span class="line">    <span class="string">&#x27;User-Agent&#x27;</span>:<span class="string">&#x27;Mozilla/5.0 (Windows NT 10.0; WOW64) \</span></span><br><span class="line"><span class="string">    AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3314.0 Safari/537.36 SE 2.X MetaSr 1.0&#x27;</span>,</span><br><span class="line">    <span class="string">&#x27;Accept-Language&#x27;</span>: <span class="string">&#x27;zh-CN,zh;q=0.9&#x27;</span>,</span><br><span class="line">    <span class="string">&#x27;Connection&#x27;</span>: <span class="string">&#x27;keep-alive&#x27;</span>,</span><br><span class="line">    <span class="string">&#x27;Host&#x27;</span>: <span class="string">&#x27;tieba.baidu.com&#x27;</span>,</span><br><span class="line">    <span class="string">&#x27;Accept&#x27;</span>: <span class="string">&#x27;text/html,application/xhtml+xml,\</span></span><br><span class="line"><span class="string">    application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8&#x27;</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">geturl</span>():</span></span><br><span class="line">    <span class="keyword">global</span> flag</span><br><span class="line">    <span class="keyword">if</span> flag==<span class="number">1</span>:</span><br><span class="line">        url = <span class="string">&#x27;https://tieba.baidu.com/p/6520552534&#x27;</span></span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        url=<span class="string">&#x27;https://tieba.baidu.com/p/6520552534?pn=%s&#x27;</span> %flag</span><br><span class="line">    time.sleep(<span class="number">1.3</span>)</span><br><span class="line">    print(<span class="string">&quot;ready for No. %s page&quot;</span> %flag)</span><br><span class="line">    <span class="keyword">return</span> url</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">getHtml</span>(<span class="params">url,headers</span>):</span></span><br><span class="line">    <span class="keyword">try</span>:</span><br><span class="line">        r=requests.get(url,headers)</span><br><span class="line">        r.encoding=<span class="string">&#x27;utf8&#x27;</span> <span class="comment">#将对象编码转换成UTF-8编码</span></span><br><span class="line">        html=r</span><br><span class="line">    <span class="keyword">except</span>:</span><br><span class="line">        print(<span class="string">&quot;failed to geturl&quot;</span>)           <span class="comment"># 如果网络连接异常，则报错。</span></span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        <span class="keyword">return</span> html</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">getimgurl</span>(<span class="params">t</span>):</span></span><br><span class="line">    pat = <span class="string">r&#x27;src=&quot;(.*?\.jpg)&quot; size=&#x27;</span></span><br><span class="line">    imglist = re.compile(pat).findall(t)</span><br><span class="line">    <span class="keyword">return</span> imglist</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">saveimg</span>(<span class="params">imglist</span>):</span></span><br><span class="line">    <span class="keyword">global</span> flag</span><br><span class="line">    x = <span class="number">1</span></span><br><span class="line">    <span class="keyword">for</span> img <span class="keyword">in</span> imglist:</span><br><span class="line">        <span class="keyword">try</span>:</span><br><span class="line">            urllib.request.urlretrieve(img, <span class="string">&#x27;D:/study/pyimg/p%d-%d.jpg&#x27;</span> %(flag,x))</span><br><span class="line">            print(<span class="string">&quot;dl %d.jpg from page %d successfully&quot;</span> %(x,flag))</span><br><span class="line">            x = x + <span class="number">1</span></span><br><span class="line">        <span class="keyword">except</span>:</span><br><span class="line">            print(<span class="string">&quot;failed to dl&quot;</span>)</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> flag <span class="keyword">in</span> range(<span class="number">1</span>, <span class="number">5</span>):</span><br><span class="line">    url=geturl()</span><br><span class="line">    t = getHtml(url, headers=headers).text</span><br><span class="line">    imglist = getimgurl(t)</span><br><span class="line">    saveimg(imglist)</span><br></pre></td></tr></table></figure>
 
             <div class="clearfix"></div>
@@ -385,8 +397,6 @@
                     
                     <li><a href="https://github.com/zing1116" title="Github" target="_blank"><i class="icon-github"></i></a>&nbsp;</li>
                     
-                    
-                    <li><a href="https://twitter.com/" title="Twitter" target="_blank"><i class="icon-twitter"></i></a>&nbsp;</li>
                     
                     
                     <li><a href="https://www.facebook.com/" title="Facebook" target="_blank"><i class="icon-facebook"></i></a>&nbsp;</li>

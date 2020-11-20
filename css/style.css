@@ -3558,3 +3558,16 @@ div.vcontrol{
   font-weight: 400 !important;
 }
 /**/
+.ttoc {
+  float: right;
+  position: fixed;
+  margin-left: 40px;
+  padding: 10px 20px;
+  background: #f1f1f1;
+  border-radius: 10px;
+  box-shadow: 0 0 3px #bbb;
+}
+
+ol.toc {
+	padding-inline-start: 10px;
+}
