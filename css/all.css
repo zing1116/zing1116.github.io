@@ -3343,7 +3343,7 @@ footer .footer_bottom {
 #intro .col-md-8.col-md-offset-2 h1 {
 	font-family: 'Georgia', serif, Helvetica, "Helvetica Neue", "Hiragino Sans GB", "Microsoft YaHei", "Source Han Sans CN", "WenQuanYi Micro Hei", Arial, sans-serif;
 }
-@media (max-width:767px) {
+@media screen and (max-width:1221px) {
 	#intro .ttoc {
 		display: none;
 }
@@ -3699,6 +3699,13 @@ ol.toc {
 	padding-inline-start: 10px;
 }
 
+.post-copyright {
+    margin: 2em 0 0;
+    padding: 0.5em 1em;
+    border-left: 3px solid #333333;
+    background-color: #F9F9F9;
+    list-style: none;
+}
 @charset "utf-8";
 /* CSS Document */
 
