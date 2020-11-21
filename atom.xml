@@ -3,11 +3,11 @@
   <title>ZING&#39;S BLOG</title>
   
   <subtitle>zzingsub</subtitle>
-  <link href="http://yoursite.com/atom.xml" rel="self"/>
+  <link href="https://zing1116.works/atom.xml" rel="self"/>
   
-  <link href="http://yoursite.com/"/>
+  <link href="https://zing1116.works/"/>
   <updated>2020-11-20T15:58:18.323Z</updated>
-  <id>http://yoursite.com/</id>
+  <id>https://zing1116.works/</id>
   
   <author>
     <name>Zing_zyy</name>
@@ -18,8 +18,8 @@
   
   <entry>
     <title>Python爬取贴吧图片（含urllib库和requests库的两种爬取方式）</title>
-    <link href="http://yoursite.com/2020/03/22/tieba/"/>
-    <id>http://yoursite.com/2020/03/22/tieba/</id>
+    <link href="https://zing1116.works/2020/03/22/tieba/"/>
+    <id>https://zing1116.works/2020/03/22/tieba/</id>
     <published>2020-03-22T12:40:05.000Z</published>
     <updated>2020-11-20T15:58:18.323Z</updated>
     
@@ -33,23 +33,23 @@
     
     
     
-    <category term="python" scheme="http://yoursite.com/categories/python/"/>
+    <category term="python" scheme="https://zing1116.works/categories/python/"/>
     
-    <category term="爬虫" scheme="http://yoursite.com/categories/python/%E7%88%AC%E8%99%AB/"/>
+    <category term="爬虫" scheme="https://zing1116.works/categories/python/%E7%88%AC%E8%99%AB/"/>
     
     
-    <category term="爬虫" scheme="http://yoursite.com/tags/%E7%88%AC%E8%99%AB/"/>
+    <category term="爬虫" scheme="https://zing1116.works/tags/%E7%88%AC%E8%99%AB/"/>
     
-    <category term="urllib库" scheme="http://yoursite.com/tags/urllib%E5%BA%93/"/>
+    <category term="urllib库" scheme="https://zing1116.works/tags/urllib%E5%BA%93/"/>
     
-    <category term="requests库" scheme="http://yoursite.com/tags/requests%E5%BA%93/"/>
+    <category term="requests库" scheme="https://zing1116.works/tags/requests%E5%BA%93/"/>
     
   </entry>
   
   <entry>
     <title>あの街に住んでる彼らのこと</title>
-    <link href="http://yoursite.com/2020/02/17/cishang/"/>
-    <id>http://yoursite.com/2020/02/17/cishang/</id>
+    <link href="https://zing1116.works/2020/02/17/cishang/"/>
+    <id>https://zing1116.works/2020/02/17/cishang/</id>
     <published>2020-02-17T04:21:37.000Z</published>
     <updated>2020-11-20T02:35:32.661Z</updated>
     
@@ -65,21 +65,21 @@
     
     
     
-    <category term="漫画自汉化" scheme="http://yoursite.com/categories/%E6%BC%AB%E7%94%BB%E8%87%AA%E6%B1%89%E5%8C%96/"/>
+    <category term="漫画自汉化" scheme="https://zing1116.works/categories/%E6%BC%AB%E7%94%BB%E8%87%AA%E6%B1%89%E5%8C%96/"/>
     
-    <category term="刺傷" scheme="http://yoursite.com/categories/%E6%BC%AB%E7%94%BB%E8%87%AA%E6%B1%89%E5%8C%96/%E5%88%BA%E5%82%B7/"/>
+    <category term="刺傷" scheme="https://zing1116.works/categories/%E6%BC%AB%E7%94%BB%E8%87%AA%E6%B1%89%E5%8C%96/%E5%88%BA%E5%82%B7/"/>
     
     
-    <category term="漫画自汉化" scheme="http://yoursite.com/tags/%E6%BC%AB%E7%94%BB%E8%87%AA%E6%B1%89%E5%8C%96/"/>
+    <category term="漫画自汉化" scheme="https://zing1116.works/tags/%E6%BC%AB%E7%94%BB%E8%87%AA%E6%B1%89%E5%8C%96/"/>
     
-    <category term="刺傷" scheme="http://yoursite.com/tags/%E5%88%BA%E5%82%B7/"/>
+    <category term="刺傷" scheme="https://zing1116.works/tags/%E5%88%BA%E5%82%B7/"/>
     
   </entry>
   
   <entry>
     <title>バイ·マイ·サイド play2.5</title>
-    <link href="http://yoursite.com/2020/02/13/bms/"/>
-    <id>http://yoursite.com/2020/02/13/bms/</id>
+    <link href="https://zing1116.works/2020/02/13/bms/"/>
+    <id>https://zing1116.works/2020/02/13/bms/</id>
     <published>2020-02-13T12:06:56.000Z</published>
     <updated>2020-11-20T02:35:34.191Z</updated>
     
@@ -95,14 +95,14 @@
     
     
     
-    <category term="漫画自汉化" scheme="http://yoursite.com/categories/%E6%BC%AB%E7%94%BB%E8%87%AA%E6%B1%89%E5%8C%96/"/>
+    <category term="漫画自汉化" scheme="https://zing1116.works/categories/%E6%BC%AB%E7%94%BB%E8%87%AA%E6%B1%89%E5%8C%96/"/>
     
-    <category term="ナツメカズキ" scheme="http://yoursite.com/categories/%E6%BC%AB%E7%94%BB%E8%87%AA%E6%B1%89%E5%8C%96/%E3%83%8A%E3%83%84%E3%83%A1%E3%82%AB%E3%82%BA%E3%82%AD/"/>
+    <category term="ナツメカズキ" scheme="https://zing1116.works/categories/%E6%BC%AB%E7%94%BB%E8%87%AA%E6%B1%89%E5%8C%96/%E3%83%8A%E3%83%84%E3%83%A1%E3%82%AB%E3%82%BA%E3%82%AD/"/>
     
     
-    <category term="漫画自汉化" scheme="http://yoursite.com/tags/%E6%BC%AB%E7%94%BB%E8%87%AA%E6%B1%89%E5%8C%96/"/>
+    <category term="漫画自汉化" scheme="https://zing1116.works/tags/%E6%BC%AB%E7%94%BB%E8%87%AA%E6%B1%89%E5%8C%96/"/>
     
-    <category term="ナツメカズキ" scheme="http://yoursite.com/tags/%E3%83%8A%E3%83%84%E3%83%A1%E3%82%AB%E3%82%BA%E3%82%AD/"/>
+    <category term="ナツメカズキ" scheme="https://zing1116.works/tags/%E3%83%8A%E3%83%84%E3%83%A1%E3%82%AB%E3%82%BA%E3%82%AD/"/>
     
   </entry>
   
