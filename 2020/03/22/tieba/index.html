@@ -212,14 +212,44 @@
     <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%A6%82%E8%BF%B0"><span class="toc-number">1.</span> <span class="toc-text">概述</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%8E%AF%E5%A2%83%E5%8F%8A%E6%B6%89%E5%8F%8A%E5%BA%93"><span class="toc-number">1.1.</span> <span class="toc-text">环境及涉及库</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%86%85%E5%AE%B9"><span class="toc-number">1.2.</span> <span class="toc-text">内容</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%A1%B5%E9%9D%A2%E8%8E%B7%E5%8F%96"><span class="toc-number">2.</span> <span class="toc-text">页面获取</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%9B%AE%E6%A0%87%E6%8F%90%E5%8F%96"><span class="toc-number">3.</span> <span class="toc-text">目标提取</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%9B%AE%E6%A0%87%E4%BF%9D%E5%AD%98"><span class="toc-number">4.</span> <span class="toc-text">目标保存</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%A4%9A%E9%A1%B5%E7%88%AC%E5%8F%96"><span class="toc-number">5.</span> <span class="toc-text">多页爬取</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%A6%82%E6%9E%9C%E7%94%A8urlopen%E2%80%94%E2%80%94"><span class="toc-number">6.</span> <span class="toc-text">如果用urlopen——</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%99%84%E5%BD%95"><span class="toc-number">7.</span> <span class="toc-text">附录</span></a></li></ol>
 
     <div class="tt">
-    <a href="javascript:window.scrollTo(0, 0);">TOP</a>
+    <a href="javascript:scrollSmoothTo(0);">TOP</a>
     </br>
-    <a href="javascript:window.scrollTo(0, document.body.scrollHeight);">BOTTOM</a>
+    <a href="javascript:scrollSmoothTo(document.body.scrollHeight);">BOTTOM</a>
     </br>
     <a href="javascript:window.history.back();">BACK</a>
     </div>
 
     </div>
+
+    <script>
+    /**
+ @description 页面垂直平滑滚动到指定滚动高度
+ @author zhangxinxu(.com)
+*/
+var scrollSmoothTo = function (position) {
+    if (!window.requestAnimationFrame) {
+        window.requestAnimationFrame = function(callback, element) {
+            return setTimeout(callback, 17);
+        };
+    }
+    // 当前滚动高度
+    var scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+    // 滚动step方法
+    var step = function () {
+        // 距离目标滚动距离
+        var distance = position - scrollTop;
+        // 目标滚动位置
+        scrollTop = scrollTop + distance / 5;
+        if (Math.abs(distance) < 1) {
+            window.scrollTo(0, position);
+        } else {
+            window.scrollTo(0, scrollTop);
+            requestAnimationFrame(step);
+        }
+    };
+    step();
+};
+    </script>
 
 
     <div class="container">
