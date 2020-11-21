@@ -52,6 +52,13 @@
 		animation-fill-mode: none;
 	}
 }
+
+@media (max-width: 1024px) {
+	.ttoc {
+	display: none;	
+	}
+}
+
 body {
 	background-color: #FFFFFF;
 	background-color: rgb(255,255,255);
