@@ -1220,6 +1220,7 @@ span.sb-caret { /* Caret Down */
 		display: none;
 	}
 }
+
 #blog-post a.readmore {
 	position: absolute;
 	top: 0;
@@ -3342,6 +3343,14 @@ footer .footer_bottom {
 #intro .col-md-8.col-md-offset-2 h1 {
 	font-family: 'Georgia', serif, Helvetica, "Helvetica Neue", "Hiragino Sans GB", "Microsoft YaHei", "Source Han Sans CN", "WenQuanYi Micro Hei", Arial, sans-serif;
 }
+@media (max-width:767px) {
+	#intro .ttoc {
+		display: none;
+}
+}
+
+
+
 /* Import the font file with the icons in it */
 
 /*@font-face { font-family: 'icons'; src:  url('../fonts/icons.woff') format('woff'); font-weight: normal; font-style: normal; }*/
