@@ -53,11 +53,6 @@
 	}
 }
 
-@media (max-width: 1024px) {
-	.ttoc {
-	display: none;	
-	}
-}
 
 body {
 	background-color: #FFFFFF;
@@ -1206,6 +1201,9 @@ span.sb-caret { /* Caret Down */
 		-webkit-border-radius: 0 4px 4px 0;
 		-moz-border-radius: 0 4px 4px 0;
 		border-radius: 0 4px 4px 0;
+	}
+	#blog-post .ttoc{
+		display: none;
 	}
 }
 #blog-post a.readmore {

@@ -66,6 +66,8 @@
 		animation-fill-mode: none;
 	}
 }
+
+
 body {
 	background-color: #FFFFFF;
 	background-color: rgb(255,255,255);
@@ -1213,6 +1215,9 @@ span.sb-caret { /* Caret Down */
 		-webkit-border-radius: 0 4px 4px 0;
 		-moz-border-radius: 0 4px 4px 0;
 		border-radius: 0 4px 4px 0;
+	}
+	#blog-post .ttoc{
+		display: none;
 	}
 }
 #blog-post a.readmore {
