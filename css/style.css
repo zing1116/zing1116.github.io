@@ -3670,24 +3670,3 @@ div.vcontrol{
 ol.toc {
 	padding-inline-start: 10px;
 }
-
-div#div_02 {
-	display: none; /*初始不显示*/
-	position: absolute; /*使图片脱离流*/
-	left: 120px;
-	top: 15px;
-}
- 
-#div_02 img {
-	display: block; /*一直显示*/
-}
- 
-div#div_01:hover {
-	div#div_02 {display: block; }
-	/*当鼠标悬停时，显示图片 */
-}
-
-#intro > div > div.col-md-8.col-md-offset-2 > div.aabout > li {
-	list-style-type: none; /*去除列表符号*/
-	position: relative; /*配合子标签使用*/
-}
