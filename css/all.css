@@ -3415,7 +3415,8 @@ footer .footer_bottom {
   width:120px;
   height:120px;
   /*border:5px solid white;*/
-  background: url('https://i.loli.net/2020/11/21/1K6Vd3UufywarEO.jpg') top center;
+  /*background: url('https://i.loli.net/2020/11/21/1K6Vd3UufywarEO.jpg') top center;*/
+  background: url('https://i.loli.net/2020/11/22/sLkoAjyDFlcU9fJ.png') top center;
   background-size:100% auto;
   position:absolute;
   top:20px;
@@ -3428,7 +3429,7 @@ footer .footer_bottom {
   width:120px;
   height:120px;
   /*border:5px solid white;*/
-  background: url('https://i.loli.net/2020/11/21/1K6Vd3UufywarEO.jpg') top center;
+  background: url('https://i.loli.net/2020/11/22/sLkoAjyDFlcU9fJ.png') top center;
   background-size:100% auto;
   position:absolute;
   top:-90px;
@@ -3487,9 +3488,6 @@ div.vheader.item2{
   margin: 0px !important;
 }
 
-input.vnick.vinput{
-  border-right: 2px solid #a4d8fa !important;
-}
 
 div.vcontrol{
   padding-top: 0px !important;
@@ -3526,11 +3524,11 @@ div#comments.comments.v{
 }
 
 .v .vwrap .vedit .vctrl{
-  text-align: left !important;
+  text-align: center !important;
 }
 
 .v .vwrap .vedit .vctrl span{
-  background-color: #7f7f7f !important;
+  background-color: #ffffff !important;
   color: #fff !important;
   border-radius: 3px !important;
   padding: 3px !important;
