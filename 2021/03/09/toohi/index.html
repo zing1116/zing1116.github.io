@@ -17,7 +17,7 @@
 <!--<![endif]-->
 
 <head>
-  <title>Archives | ZING&#39;S BLOG</title>
+  <title>囀る4小册子 「遠火」 | ZING&#39;S BLOG</title>
   <!-- Meta data -->
     <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" >
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
@@ -65,7 +65,7 @@
 </head>
 
 <!--
-<body class="home-template">
+<body class="post-template">
 -->
 <body id="index" class="lightnav animsition">
 
@@ -211,96 +211,148 @@
         <!-- ============================ Header & Logo bar =========================== -->
 
 
-      <!-- ============================ Hero Image =========================== -->
+      
+<section id="intro">
+    <div class="ttoc">
+    
 
-<section id="hero" class="scrollme">
-    <div class="container-fluid element-img" style="background: url(/img/cover.JPG) no-repeat center center fixed;background-size: cover">
-        <div class="row">
-            <div class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-8 col-md-offset-2 vertical-align cover boost text-center">
-                <div class="center-me animateme" data-when="exit" data-from="0" data-to="0.6" data-opacity="0" data-translatey="100">
-                    <div>
-                        
-                        <h2>FIND IT FLOATING IN MY <span>STATIC</span> DREAM.</h2>
-                        <p></p>
-                        
-                        <h2></h2>
-                        <p>まずは人間として生きて，明日の楽しみ数えて。</p>
-                        
-
-                    </div>
-                </div>
-            </div>
-            <!-- // .col-md-12 -->
-        </div>
-        <div class="herofade beige-dk"></div>
+    <div class="tt">
+    <a href="javascript:scrollSmoothTo(0);"><strong>TOP</strong></a>
+    </br>
+    <a href="javascript:scrollSmoothTo(document.body.scrollHeight-document.querySelector('#vcomments').scrollHeight);"><strong>BOTTOM</strong></a>
+    </br>
+    <a href="javascript:window.history.back();"><strong>BACK</strong></a>
     </div>
-</section>
 
-<!-- Height spacing helper -->
-<div class="heightblock"></div>
-<!-- // End height spacing helper -->
+    </div>
 
-<!-- ============================ END Hero Image =========================== -->
+    <script>
+    /**
+ @description 页面垂直平滑滚动到指定滚动高度
+ @author zhangxinxu(.com)
+*/
+var scrollSmoothTo = function (position) {
+    if (!window.requestAnimationFrame) {
+        window.requestAnimationFrame = function(callback, element) {
+            return setTimeout(callback, 17);
+        };
+    }
+    // 当前滚动高度
+    var scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+    // 滚动step方法
+    var step = function () {
+        // 距离目标滚动距离
+        var distance = position - scrollTop;
+        // 目标滚动位置
+        scrollTop = scrollTop + distance / 5;
+        if (Math.abs(distance) < 1) {
+            window.scrollTo(0, position);
+        } else {
+            window.scrollTo(0, scrollTop);
+            requestAnimationFrame(step);
+        }
+    };
+    step();
+};
+    </script>
 
 
-
-
-<section id="services">
     <div class="container">
-        <div class="row">
-            <div class="col-md-10 col-md-offset-1">
-                <div class="row boxes">
-                    
-                    
-                        
-                        
-                        <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3 wow fadeInUp" data-wow-delay="0.3s">
-                            
-                              <h4 class="title"><a href="/2021/03/09/toohi/">囀る4小册子 「遠火」</a></h4>
-                            
-                            <p><time datetime="2021-03-09T01:13:15.000Z"><a href="/2021/03/09/toohi/">2021-03-09</a></time></p>
-                        </div>
-                    
-                        
-                        
-                        <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3 wow fadeInUp" data-wow-delay="0.3s">
-                            
-                              <h4 class="title"><a href="/2020/03/22/tieba/">Python爬取贴吧图片（含urllib库和requests库的两种爬取方式）</a></h4>
-                            
-                            <p><time datetime="2020-03-22T12:40:05.000Z"><a href="/2020/03/22/tieba/">2020-03-22</a></time></p>
-                        </div>
-                    
-                        
-                        
-                        <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3 wow fadeInUp" data-wow-delay="0.3s">
-                            
-                              <h4 class="title"><a href="/2020/02/17/cishang/">あの街に住んでる彼らのこと</a></h4>
-                            
-                            <p><time datetime="2020-02-17T04:21:37.000Z"><a href="/2020/02/17/cishang/">2020-02-17</a></time></p>
-                        </div>
-                    
-                        
-                        
-                        <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3 wow fadeInUp" data-wow-delay="0.3s">
-                            
-                              <h4 class="title"><a href="/2020/02/13/bms/">バイ·マイ·サイド play2.5</a></h4>
-                            
-                            <p><time datetime="2020-02-13T12:06:56.000Z"><a href="/2020/02/13/bms/">2020-02-13</a></time></p>
-                        </div>
-                    
-                </div>
-            </div>    
+    
+        <div class="row col-md-offset-2">
+            <div class="col-md-8">
+    			<span class="post-meta">
+	
+    
+    
+    <a href='/categories/漫画自汉化/'>漫画自汉化</a> >
+    
+    <a href='/categories/漫画自汉化/ヨネダコウ/'>ヨネダコウ</a>
+    
+    
+<br>
+      <time datetime="2021-03-09T01:13:15.000Z" itemprop="datePublished">
+          2021-03-09
+      </time>
+    
+    
+    | 
+    <a href='/tags/漫画自汉化/'>漫画自汉化</a> ,
+    
+    <a href='/tags/ヨネダコウ/'>ヨネダコウ</a>
+    
+    
+</span>
+                <h1>囀る4小册子 「遠火」</h1>
+                 
+            </div>
         </div>
-    </div>
-</section> 
+        <div class="col-md-8 col-md-offset-2">
+      		<p>图源：我<br>翻译：本人塑料日语水平，有几个地方借鉴了小五的翻译，就不写自己了<br>修图：我<br>嵌字：我</p>
+<p>原本想挑战一下自扫自修的，但是又不舍得拆书，就只能对4卷小册子下手，但是没有扫描仪只能用手机扫，不会修图就只能修出这种鬼样，嵌字部分捡起了一年前的技术，学到了“修烂了就加大描边盖住它”这种臭不要脸的方法（逃走…）</p>
+<p>禁止转载 喜欢还不快去买书（！</p>
+<p><img src="https://i.loli.net/2021/03/15/CpjKYRw1JVzDB6f.jpg" alt="0.JPG"><br><img src="https://i.loli.net/2021/03/15/eNCgD9suWISwBkY.png" alt="1.png"><br><img src="https://i.loli.net/2021/03/15/HDsTVPj85FoXCMN.png" alt="2.png"><br><img src="https://i.loli.net/2021/03/15/BlSN1wVPqtgW3Qe.png" alt="3.png"><br><img src="https://i.loli.net/2021/03/15/lIAzqk1wMDQu3PV.png" alt="4.png"><br><img src="https://i.loli.net/2021/03/15/NjUdBq7tkbW1Y6M.png" alt="5.png"><br><img src="https://i.loli.net/2021/03/15/NHmfLXRKy2TxSiP.png" alt="6.png"><br><img src="https://i.loli.net/2021/03/15/TiK2UFvlamkRIyx.jpg" alt="7.png"><br><img src="https://i.loli.net/2021/03/15/a1EmD5T42tGMLcC.png" alt="8.png"><br><img src="https://i.loli.net/2021/03/15/zOSypmUKki4x6NJ.png" alt="9.png"><br><img src="https://i.loli.net/2021/03/15/Ci3RJc7AqWH4TFO.png" alt="10.png"><br><img src="https://i.loli.net/2021/03/15/6P7dJ1aNwSxyMqg.png" alt="11.png"><br><img src="https://i.loli.net/2021/03/15/LsdJMCP2r9qn4ia.png" alt="12.png"><br><img src="https://i.loli.net/2021/03/15/hpMYqnJVABfPc9i.png" alt="13.png"><br><img src="https://i.loli.net/2021/03/15/OfiWVrjH43ZRLv6.png" alt="14.png"><br><img src="https://i.loli.net/2021/03/15/aBdeGjZqtSW7u89.png" alt="15.png"><br><img src="https://i.loli.net/2021/03/15/n4jsrfaKd9lJZEv.png" alt="16.png"><br><img src="https://i.loli.net/2021/03/15/Qe3xGJw4vMukKId.jpg" alt="17.JPG"><br><img src="https://i.loli.net/2021/03/15/h8wARn7b1qlUtrM.jpg" alt="18.JPG"><br><img src="https://i.loli.net/2021/03/15/hS2eAWCyVX97bsN.jpg" alt="19.JPG"></p>
 
-<section id="statement">
-    <div class="container text-center wow fadeInUp" data-wow-delay="0.5s">
-        <div class="row">
-            <p>LIVE AND LEARN.</p>
+            <div class="clearfix"></div>
+
+<hr class="nogutter">
+     <div>    
+      <ul class="post-copyright">
+         <li class="post-copyright-link">
+          <strong>本文作者：</strong>
+          <a href="/" title="欢迎访问 Zing_zyy 的个人博客">Zing_zyy</a>
+        </li>
+
+        <li class="post-copyright-link">
+          <strong>本文标题：</strong>
+          <a href="https://zing1116.works/2021/03/09/toohi/" title="囀る4小册子 「遠火」">囀る4小册子 「遠火」</a>
+        </li>
+
+        <li class="post-copyright-link">
+          <strong>本文链接：</strong>
+          <a href="https://zing1116.works/2021/03/09/toohi/" title="囀る4小册子 「遠火」">https://zing1116.works/2021/03/09/toohi/</a>
+        </li>
+
+        <li class="post-copyright-date">
+            <strong>发布时间：</strong>2021年3月9日 - 09时03分
+        </li>  
+
+        <li class="post-copyright-license">
+          <strong>版权声明： </strong>
+          本文由 Zing_zyy 原创，采用 <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/deed.zh" rel="license" target="_blank">保留署名-非商业性使用-禁止演绎 4.0-国际许可协议</a> </br>转载请保留以上声明信息！
+        </li>
+      </ul>
+  </div>
+
+            <hr class="nogutter">
+            <div id="vcomments"></div>
+    <script>
+        new Valine({
+            el: '#vcomments',
+            appId: 'LHBhPs5Plo7M9AGvQC707ITS-9Nh9j0Va',
+            appKey: 'SLxrX8osHTNKoBYdrX1SkEpf',
+            placeholder: '可以匿名评论噢~',
+            visitor: true,
+            avatar: 'wavatar',
+            recordIP: true,
+            serverURLs: 'https://zing1116.works',
+        })
+    </script>
+
         </div>
-    </div>
+        <nav class="m-pagination col-md-8 col-md-offset-2 col-sm-24" role="pagination">
+    
+    
+    <a class="pull-right" href="/2020/03/22/tieba/">
+        Python爬取贴吧图片（含urllib库和requests库的两种爬取方式） →
+    </a>
+    
+</nav>
+
+        
 </section>
+
+
       
 <!-- ============================ Footer =========================== -->
 

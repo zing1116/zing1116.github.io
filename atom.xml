@@ -6,7 +6,7 @@
   <link href="https://zing1116.works/atom.xml" rel="self"/>
   
   <link href="https://zing1116.works/"/>
-  <updated>2020-11-20T15:58:18.323Z</updated>
+  <updated>2021-03-15T03:34:05.776Z</updated>
   <id>https://zing1116.works/</id>
   
   <author>
@@ -15,6 +15,35 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>囀る4小册子 「遠火」</title>
+    <link href="https://zing1116.works/2021/03/09/toohi/"/>
+    <id>https://zing1116.works/2021/03/09/toohi/</id>
+    <published>2021-03-09T01:13:15.000Z</published>
+    <updated>2021-03-15T03:34:05.776Z</updated>
+    
+    <content type="html"><![CDATA[<p>图源：我<br>翻译：本人塑料日语水平，有几个地方借鉴了小五的翻译，就不写自己了<br>修图：我<br>嵌字：我</p><p>原本想挑战一下自扫自修的，但是又不舍得拆书，就只能对4卷小册子下手，但是没有扫描仪只能用手机扫，不会修图就只能修出这种鬼样，嵌字部分捡起了一年前的技术，学到了“修烂了就加大描边盖住它”这种臭不要脸的方法（逃走…）</p><p>禁止转载 喜欢还不快去买书（！</p><p><img src="https://i.loli.net/2021/03/15/CpjKYRw1JVzDB6f.jpg" alt="0.JPG"><br><img src="https://i.loli.net/2021/03/15/eNCgD9suWISwBkY.png" alt="1.png"><br><img src="https://i.loli.net/2021/03/15/HDsTVPj85FoXCMN.png" alt="2.png"><br><img src="https://i.loli.net/2021/03/15/BlSN1wVPqtgW3Qe.png" alt="3.png"><br><img src="https://i.loli.net/2021/03/15/lIAzqk1wMDQu3PV.png" alt="4.png"><br><img src="https://i.loli.net/2021/03/15/NjUdBq7tkbW1Y6M.png" alt="5.png"><br><img src="https://i.loli.net/2021/03/15/NHmfLXRKy2TxSiP.png" alt="6.png"><br><img src="https://i.loli.net/2021/03/15/TiK2UFvlamkRIyx.jpg" alt="7.png"><br><img src="https://i.loli.net/2021/03/15/a1EmD5T42tGMLcC.png" alt="8.png"><br><img src="https://i.loli.net/2021/03/15/zOSypmUKki4x6NJ.png" alt="9.png"><br><img src="https://i.loli.net/2021/03/15/Ci3RJc7AqWH4TFO.png" alt="10.png"><br><img src="https://i.loli.net/2021/03/15/6P7dJ1aNwSxyMqg.png" alt="11.png"><br><img src="https://i.loli.net/2021/03/15/LsdJMCP2r9qn4ia.png" alt="12.png"><br><img src="https://i.loli.net/2021/03/15/hpMYqnJVABfPc9i.png" alt="13.png"><br><img src="https://i.loli.net/2021/03/15/OfiWVrjH43ZRLv6.png" alt="14.png"><br><img src="https://i.loli.net/2021/03/15/aBdeGjZqtSW7u89.png" alt="15.png"><br><img src="https://i.loli.net/2021/03/15/n4jsrfaKd9lJZEv.png" alt="16.png"><br><img src="https://i.loli.net/2021/03/15/Qe3xGJw4vMukKId.jpg" alt="17.JPG"><br><img src="https://i.loli.net/2021/03/15/h8wARn7b1qlUtrM.jpg" alt="18.JPG"><br><img src="https://i.loli.net/2021/03/15/hS2eAWCyVX97bsN.jpg" alt="19.JPG"></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;图源：我&lt;br&gt;翻译：本人塑料日语水平，有几个地方借鉴了小五的翻译，就不写自己了&lt;br&gt;修图：我&lt;br&gt;嵌字：我&lt;/p&gt;
+&lt;p&gt;原本想挑战一下自扫自修的，但是又不舍得拆书，就只能对4卷小册子下手，但是没有扫描仪只能用手机扫，不会修图就只能修出这种鬼样，嵌字部分捡起了一年前的</summary>
+      
+    
+    
+    
+    <category term="漫画自汉化" scheme="https://zing1116.works/categories/%E6%BC%AB%E7%94%BB%E8%87%AA%E6%B1%89%E5%8C%96/"/>
+    
+    <category term="ヨネダコウ" scheme="https://zing1116.works/categories/%E6%BC%AB%E7%94%BB%E8%87%AA%E6%B1%89%E5%8C%96/%E3%83%A8%E3%83%8D%E3%83%80%E3%82%B3%E3%82%A6/"/>
+    
+    
+    <category term="漫画自汉化" scheme="https://zing1116.works/tags/%E6%BC%AB%E7%94%BB%E8%87%AA%E6%B1%89%E5%8C%96/"/>
+    
+    <category term="ヨネダコウ" scheme="https://zing1116.works/tags/%E3%83%A8%E3%83%8D%E3%83%80%E3%82%B3%E3%82%A6/"/>
+    
+  </entry>
   
   <entry>
     <title>Python爬取贴吧图片（含urllib库和requests库的两种爬取方式）</title>
