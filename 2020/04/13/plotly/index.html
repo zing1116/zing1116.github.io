@@ -1,0 +1,1084 @@
+<!DOCTYPE html>
+<!--[if lte IE 8 ]>
+<html class="ie" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US">
+<![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!-->
+<!--
+***************  *      *     *
+      8          *    *       *
+      8          *  *         *
+      8          **           *
+      8          *  *         *
+      8          *    *       *
+      8          *      *     *
+      8          *        *   ***********    -----Theme By Kieran(http://go.kieran.top)
+-->
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="zh-CN" lang="zh-CN">
+<!--<![endif]-->
+
+<head>
+  <title>Plotly学习笔记 | ZING&#39;S BLOG</title>
+  <!-- Meta data -->
+    <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" >
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="generator" content="ZING'S BLOG">
+    <meta name="author" content="Zing_zyy">
+    <meta name="description" content="zzingsub" />
+    <meta name="keywords" content="key" />
+
+    <!-- Favicon, (keep icon in root folder) -->
+    <link rel="Shortcut Icon" href="/img/favicon.ico" type="image/ico">
+
+    <link rel="alternate" href="/atom.xml" title="ZING&#39;S BLOG" type="application/atom+xml">
+    <link rel="stylesheet" href="/css/all.css" media="screen" type="text/css">
+    
+    <link rel="stylesheet" href="/highlightjs/vs.css" type="text/css">
+    
+
+    <!--[if IE 8]>
+    <link rel="stylesheet" type="text/css" href="/css/ie8.css" />
+    <![endif]-->
+
+    <!-- jQuery | Load our jQuery, with an alternative source fallback to a local version if request is unavailable -->
+    <script src="/js/jquery-1.11.1.min.js"></script>
+    <script>window.jQuery || document.write('<script src="js/jquery-1.11.1.min.js"><\/script>')</script>
+
+    <!-- Load these in the <head> for quicker IE8+ load times -->
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="/js/html5shiv.min.js"></script>
+    <script src="/js/respond.min.js"></script>
+    <![endif]-->
+    <script src='//unpkg.com/valine/dist/Valine.min.js'></script>
+
+  
+  
+  <link rel="alternate" type="application/atom+xml" title="Atom 0.3" href="atom.xml">
+  
+  
+
+  <style>.col-md-8.col-md-offset-2.opening-statement img{display:none;}</style>
+
+
+
+</head>
+
+<!--
+<body class="post-template">
+-->
+<body id="index" class="lightnav animsition">
+
+      <!-- ============================ Off-canvas navigation =========================== -->
+
+    <div class="sb-slidebar sb-right sb-style-overlay sb-momentum-scrolling">
+        <div class="sb-close" aria-label="Close Menu" aria-hidden="true">
+            <img src="/img/close.png" alt="Close"/>
+        </div>
+        <!-- Lists in Slidebars -->
+        <ul class="sb-menu">
+            <li><a href="/" class="animsition-link" title="Home">Home</a></li>
+            <li><a href="/archives" class="animsition-link" title="archive">archives</a></li>
+            <!-- Dropdown Menu -->
+			
+            
+            <li>
+                <a class="sb-toggle-submenu">Mangas<span class="sb-caret"></span></a>
+                <ul class="sb-submenu">
+                    
+                        <li><a href="https://zing1116.github.io/2020/02/13/bms/" target="_BLANK" class="animsition-link">バイ·マイ·サイド</a></li>
+                        
+                    
+                        <li><a href="https://zing1116.github.io/2020/02/17/cishang/" target="_BLANK" class="animsition-link">あの街に住んでる彼らのこと</a></li>
+                        
+                    
+                        <li><a href="https://zing1116.github.io/2021/03/09/toohi/" target="_BLANK" class="animsition-link">囀る4小册子 「遠火」</a></li>
+                        
+                    
+                </ul>
+            </li>
+            
+            
+            <li>
+
+                <a class="sb-toggle-submenu">Categories<span class="sb-caret"></span></a>
+                <ul class="sb-submenu">
+                    <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/python/">python</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/python/%E6%95%B0%E6%8D%AE%E5%8F%AF%E8%A7%86%E5%8C%96/">数据可视化</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/python/%E7%88%AC%E8%99%AB/">爬虫</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%BC%AB%E7%94%BB%E8%87%AA%E6%B1%89%E5%8C%96/">漫画自汉化</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%BC%AB%E7%94%BB%E8%87%AA%E6%B1%89%E5%8C%96/%E3%83%8A%E3%83%84%E3%83%A1%E3%82%AB%E3%82%BA%E3%82%AD/">ナツメカズキ</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%BC%AB%E7%94%BB%E8%87%AA%E6%B1%89%E5%8C%96/%E3%83%A8%E3%83%8D%E3%83%80%E3%82%B3%E3%82%A6/">ヨネダコウ</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%BC%AB%E7%94%BB%E8%87%AA%E6%B1%89%E5%8C%96/%E5%88%BA%E5%82%B7/">刺傷</a></li></ul></li></ul> 
+                </ul>
+            </li>
+            
+
+            
+            <li>
+
+                <a class="sb-toggle-submenu">Tags<span class="sb-caret"></span></a>
+                <ul class="sb-submenu">
+                    
+                    <li><a href="/tags/漫画自汉化/" class="animsition-link">漫画自汉化<small>(3)</small></a></li>
+                    
+                    <li><a href="/tags/ナツメカズキ/" class="animsition-link">ナツメカズキ<small>(1)</small></a></li>
+                    
+                    <li><a href="/tags/刺傷/" class="animsition-link">刺傷<small>(1)</small></a></li>
+                    
+                    <li><a href="/tags/爬虫/" class="animsition-link">爬虫<small>(1)</small></a></li>
+                    
+                    <li><a href="/tags/urllib库/" class="animsition-link">urllib库<small>(1)</small></a></li>
+                    
+                    <li><a href="/tags/requests库/" class="animsition-link">requests库<small>(1)</small></a></li>
+                    
+                    <li><a href="/tags/ヨネダコウ/" class="animsition-link">ヨネダコウ<small>(1)</small></a></li>
+                    
+                    <li><a href="/tags/plotly/" class="animsition-link">plotly<small>(1)</small></a></li>
+                    
+                    <li><a href="/tags/数据可视化/" class="animsition-link">数据可视化<small>(1)</small></a></li>
+                     
+                </ul>
+            </li>
+            
+
+            
+            <li>
+                <a class="sb-toggle-submenu">Links<span class="sb-caret"></span></a>
+                <ul class="sb-submenu">
+                    
+                    <li><a target="_blank" rel="noopener" href="https://a123wyn.studio/" class="animsition-link">YNan&#39;s Blog</a></li>
+                    
+                    <li><a target="_blank" rel="noopener" href="https://www.name.com/" class="animsition-link">DOMAIN</a></li>
+                    
+                </ul>
+            </li>
+            
+        </ul>
+        <!-- Lists in Slidebars -->
+        <ul class="sb-menu secondary">
+            
+            <li><a href="javascript:;" class="popup-trigger" title="Search"><span class="search-icon"></span>Search</a></li>
+            
+            <li><a href="/about/about.html" class="animsition-link" title="about">About</a></li>
+            <li><a href="/atom.xml" class="animsition-link" title="rss">RSS</a></li>
+        </ul>
+    </div>
+    
+    <!-- ============================ END Off-canvas navigation =========================== -->
+
+    <!-- ============================ #sb-site Main Page Wrapper =========================== -->
+
+    <div id="sb-site">
+        <!-- #sb-site - All page content should be contained within this id, except the off-canvas navigation itself -->
+
+        <!-- ============================ Header & Logo bar =========================== -->
+
+        <div id="navigation" class="navbar navbar-fixed-top">
+            <div class="navbar-inner">
+                <div class="container">
+                    <!-- Nav logo -->
+                    <div class="logo">
+                        <a href="/about/about.html" title="AboutMe" class="animsition-link">
+                         <img src="/img/logo_garam.png" alt="AboutMe" width="35px;"/> 
+                        </a>
+                    </div>
+                    <!-- // Nav logo -->
+                    <!-- Info-bar -->
+                    <nav>
+                        <ul class="nav">
+                            <li><a href="/" class="animsition-link">HOME</a></li>
+                            <li class="nolink"><span>Always PASSIONATE.</span></li>
+                            
+                            <li><a href="https://github.com/zing1116" title="Github" target="_blank"><i class="icon-github"></i></a></li>
+                            
+                            
+                            <li><a href="https://blog.csdn.net/weixin_42418559" title="CSDN" target="_blank"><i class="icon-csdn"></i></a></li>
+                            
+                            
+                            <li><a target="_blank"><i class="icon-QQ-fill"></i></a></li>
+                            
+                            
+                            <li><a target="_blank"><i class="icon-icon-test-copy"></i></a></li>
+                            
+                            <li class="nolink"><span>To Be Alive.</span></li>
+                        </ul>
+                    </nav>
+                    <!--// Info-bar -->
+                </div>
+                <!-- // .container -->
+                <div class="learnmore sb-toggle-right"></div>
+                <button type="button" class="navbar-toggle menu-icon sb-toggle-right" title="More">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar before"></span>
+                <span class="icon-bar main"></span>
+                <span class="icon-bar after"></span>
+                </button>
+            </div>
+            <!-- // .navbar-inner -->
+        </div>
+
+        <!-- ============================ Header & Logo bar =========================== -->
+
+
+      
+<section id="intro">
+    <div class="ttoc">
+    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Plotly%E4%BB%8B%E7%BB%8D"><span class="toc-number">1.</span> <span class="toc-text">Plotly介绍</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Plotly%E7%BB%98%E5%9B%BE%E5%91%BD%E4%BB%A4"><span class="toc-number">2.</span> <span class="toc-text">Plotly绘图命令</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%95%A3%E7%82%B9%E5%9B%BE-%E6%8A%98%E7%BA%BF%E5%9B%BE"><span class="toc-number">2.1.</span> <span class="toc-text">散点图&#x2F;折线图</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%9F%B1%E7%8A%B6%E5%9B%BE"><span class="toc-number">2.2.</span> <span class="toc-text">柱状图</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%9B%B4%E6%96%B9%E5%9B%BE"><span class="toc-number">2.3.</span> <span class="toc-text">直方图</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%A5%BC%E5%9B%BE-%E7%8E%AF%E5%BD%A2%E5%9B%BE"><span class="toc-number">2.4.</span> <span class="toc-text">饼图&#x2F;环形图</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AE%B1%E7%BA%BF%E5%9B%BE"><span class="toc-number">2.5.</span> <span class="toc-text">箱线图</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%83%AD%E5%8A%9B%E5%9B%BE"><span class="toc-number">2.6.</span> <span class="toc-text">热力图</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%8B%93%E5%B1%95%E2%80%94%E2%80%94%E9%A2%9C%E8%89%B2%E6%B8%90%E5%8F%98"><span class="toc-number">3.</span> <span class="toc-text">拓展——颜色渐变</span></a></li></ol>
+
+    <div class="tt">
+    <a href="javascript:scrollSmoothTo(0);"><strong>TOP</strong></a>
+    </br>
+    <a href="javascript:scrollSmoothTo(document.body.scrollHeight-document.querySelector('#vcomments').scrollHeight);"><strong>BOTTOM</strong></a>
+    </br>
+    <a href="javascript:window.history.back();"><strong>BACK</strong></a>
+    </div>
+
+    </div>
+
+    <script>
+    /**
+ @description 页面垂直平滑滚动到指定滚动高度
+ @author zhangxinxu(.com)
+*/
+var scrollSmoothTo = function (position) {
+    if (!window.requestAnimationFrame) {
+        window.requestAnimationFrame = function(callback, element) {
+            return setTimeout(callback, 17);
+        };
+    }
+    // 当前滚动高度
+    var scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+    // 滚动step方法
+    var step = function () {
+        // 距离目标滚动距离
+        var distance = position - scrollTop;
+        // 目标滚动位置
+        scrollTop = scrollTop + distance / 5;
+        if (Math.abs(distance) < 1) {
+            window.scrollTo(0, position);
+        } else {
+            window.scrollTo(0, scrollTop);
+            requestAnimationFrame(step);
+        }
+    };
+    step();
+};
+    </script>
+
+
+    <div class="container">
+    
+        <div class="row col-md-offset-2">
+            <div class="col-md-8">
+    			<span class="post-meta">
+	
+    
+    
+    <a href='/categories/python/'>python</a> >
+    
+    <a href='/categories/python/数据可视化/'>数据可视化</a>
+    
+    
+<br>
+      <time datetime="2020-04-13T13:40:19.000Z" itemprop="datePublished">
+          2020-04-13
+      </time>
+    
+    
+    | 
+    <a href='/tags/plotly/'>plotly</a> ,
+    
+    <a href='/tags/数据可视化/'>数据可视化</a>
+    
+    
+</span>
+                <h1>Plotly学习笔记</h1>
+                 
+            </div>
+        </div>
+        <div class="col-md-8 col-md-offset-2">
+      		<h1 id="Plotly介绍"><a href="#Plotly介绍" class="headerlink" title="Plotly介绍"></a>Plotly介绍</h1><ul>
+<li>Plotly是一个基于JavaScript的绘图库，Plotly绘图种类丰富，效果美观。</li>
+<li>易于保存和分享，Plotly的绘图结果可以与Web无缝集成。</li>
+<li>Plotly默认的绘图结果是一个HTML网页文件，通过浏览器可以查看。</li>
+</ul>
+<h1 id="Plotly绘图命令"><a href="#Plotly绘图命令" class="headerlink" title="Plotly绘图命令"></a>Plotly绘图命令</h1><p>在真实项目中，使用Plotly进行绘图的完整流程包括：</p>
+<ul>
+<li>添加图轨数据<strong>trace</strong></li>
+<li>设置画图布局，使用<code>plotly.graph_objs.Layout</code>命令</li>
+<li>集成图形、布局数据</li>
+<li>绘制图形输出，用<code>plotly.offline.plot()</code>或者在jupyter notebook环境下用<code>plotly.offline.iplot()</code>进行离线绘制</li>
+</ul>
+<h2 id="散点图-折线图"><a href="#散点图-折线图" class="headerlink" title="散点图/折线图"></a>散点图/折线图</h2><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;图轨数据trace本质上是个字典，由于是绘制散点图，在这里要用到<code>plotly.graph_objs.Scatter()</code>函数创建散点图类的trace。trace包含的常用的键如下：</p>
+<p>==<em>更多参数参照<a target="_blank" rel="noopener" href="https://www.baidu.com/link?url=LYgSDzIatohwZv94t33-7nLVwQKkKNydsNCcZgGE8gp24i0TagSDQBriURYlilDb9vj3PItZe9NzwvYCjkG40iZ-oNAoqNeNvuEd33Jnfwq&wd=&eqid=e6d2dccd000390af000000065e947e50">此帖</a></em>==</p>
+<table>
+<thead>
+<tr>
+<th>键</th>
+<th>键值含义</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>x</td>
+<td>list类型；横坐标变量</td>
+</tr>
+<tr>
+<td>y</td>
+<td>list类型；纵坐标变量</td>
+</tr>
+<tr>
+<td>name</td>
+<td>图例名称</td>
+</tr>
+<tr>
+<td>maker</td>
+<td>dict类型；节点设置；{color:’ ‘,size:’ ‘}</td>
+</tr>
+<tr>
+<td>text</td>
+<td>list类型；元素标识</td>
+</tr>
+<tr>
+<td>textposition</td>
+<td>标识位置</td>
+</tr>
+<tr>
+<td>mode</td>
+<td>‘markers’表示点；‘lines‘表示折线；’text‘标识标识文本；可以用’+‘号将两种模式结合起来</td>
+</tr>
+<tr>
+<td>connectgaps</td>
+<td>bool类型；是否连接缺失值</td>
+</tr>
+<tr>
+<td>color</td>
+<td>颜色</td>
+</tr>
+<tr>
+<td>opacity</td>
+<td>透明度，值为0~1</td>
+</tr>
+</tbody></table>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;可以创建多个trace作为输出图中的多组数据，设置完trace后，将所有trace数据集成于一个列表中，作为图形数据对象。</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;然后可以开始用<code>plotly.graph_objs.Layout</code>命令进行画面布局。其常用参数如下：</p>
+<p>==<em>更多参数参照<a target="_blank" rel="noopener" href="https://www.baidu.com/link?url=LYgSDzIatohwZv94t33-7nLVwQKkKNydsNCcZgGE8gp24i0TagSDQBriURYlilDb9vj3PItZe9NzwvYCjkG40iZ-oNAoqNeNvuEd33Jnfwq&wd=&eqid=e6d2dccd000390af000000065e947e50">此帖</a></em>==</p>
+<table>
+<thead>
+<tr>
+<th>参数名</th>
+<th>参数含义</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>title</td>
+<td>图表标题</td>
+</tr>
+<tr>
+<td>xaxis</td>
+<td>dict类型；{title:横坐标名称}</td>
+</tr>
+<tr>
+<td>yaxis</td>
+<td>dict类型；{title:纵坐标名称}</td>
+</tr>
+<tr>
+<td>showlegend</td>
+<td>bool类型；是否显示图例</td>
+</tr>
+<tr>
+<td>legend</td>
+<td>dict类型；图例相对于左下角的位置；{x:横坐标的比例(&lt;=1),y:纵坐标的比例(&lt;=1)}</td>
+</tr>
+<tr>
+<td>font</td>
+<td>dict类型；字体样式和大小；{size:字体大小}</td>
+</tr>
+</tbody></table>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;设置好布局后，就可以将trace和layout两个字典用<code>plotly.graph_objs.Figure()</code>集成在一起，结果将传给我们选择的绘图函数，最后将其用<code>plotly.offline.plot()</code>或在jupyter notebook环境下用<code>plotly.offline.iplot()</code>进行离线输出即可。</p>
+<p>==<strong>关于两个输出函数的差别</strong>==</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;虽然<code>plotly.offline.plot()</code>和<code>plotly.offline.iplot()</code>两个函数都是离线输出图象的方法，但<code>plot()</code>会生成一个离线的html文件，里面放置图片，<code>iplot()</code>则直接在ipython notebook里面生成图片。</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;当在notebook中编译时，若要设置默认输出模式，可以在前面加上下面这句代码：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">plotly.offline.init_notebook_mode(connected=<span class="literal">True</span>)</span><br></pre></td></tr></table></figure>
+
+<p>示例：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> plotly <span class="keyword">as</span> py</span><br><span class="line"><span class="keyword">import</span> plotly.graph_objs <span class="keyword">as</span> go</span><br><span class="line"></span><br><span class="line">text=[]</span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">15</span>):</span><br><span class="line">    s=<span class="string">&#x27;t&#x27;</span>+str(i+<span class="number">1</span>)</span><br><span class="line">    text.append(s)</span><br><span class="line"></span><br><span class="line">trace1 = go.Scatter(</span><br><span class="line">    x=[<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>,</span><br><span class="line">       <span class="number">6</span>, <span class="number">7</span>, <span class="number">8</span>, <span class="number">9</span>, <span class="number">10</span>,</span><br><span class="line">       <span class="number">11</span>, <span class="number">12</span>, <span class="number">13</span>, <span class="number">14</span>, <span class="number">15</span>],</span><br><span class="line">    y=[<span class="number">10</span>, <span class="number">20</span>, <span class="literal">None</span>, <span class="number">15</span>, <span class="number">10</span>,</span><br><span class="line">       <span class="number">5</span>, <span class="number">15</span>, <span class="literal">None</span>, <span class="number">20</span>, <span class="number">10</span>,</span><br><span class="line">       <span class="number">10</span>, <span class="number">15</span>, <span class="number">25</span>, <span class="number">20</span>, <span class="number">10</span>],</span><br><span class="line">    text=text,</span><br><span class="line">    textposition=<span class="string">&#x27;top center&#x27;</span>,</span><br><span class="line">    mode=<span class="string">&#x27;markers+text+lines&#x27;</span>,</span><br><span class="line">    name=<span class="string">&#x27;&lt;b&gt;No&lt;/b&gt; Gaps&#x27;</span>,  <span class="comment"># Style name/legend entry with html tags</span></span><br><span class="line">    connectgaps=<span class="literal">True</span> <span class="comment">#是否连接缺失值</span></span><br><span class="line">)</span><br><span class="line">trace2 = go.Scatter(</span><br><span class="line">    x=[<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>,</span><br><span class="line">       <span class="number">6</span>, <span class="number">7</span>, <span class="number">8</span>, <span class="number">9</span>, <span class="number">10</span>,</span><br><span class="line">       <span class="number">11</span>, <span class="number">12</span>, <span class="number">13</span>, <span class="number">14</span>, <span class="number">15</span>],</span><br><span class="line">    y=[<span class="number">5</span>, <span class="number">15</span>, <span class="literal">None</span>, <span class="number">10</span>, <span class="number">5</span>,</span><br><span class="line">       <span class="number">0</span>, <span class="number">10</span>, <span class="literal">None</span>, <span class="number">15</span>, <span class="number">5</span>,</span><br><span class="line">       <span class="number">5</span>, <span class="number">10</span>, <span class="number">20</span>, <span class="number">15</span>, <span class="number">5</span>],</span><br><span class="line">    name=<span class="string">&#x27;Gaps&#x27;</span>,</span><br><span class="line">    opacity=<span class="number">0.5</span></span><br><span class="line">)</span><br><span class="line"></span><br><span class="line">data = [trace1, trace2]</span><br><span class="line"></span><br><span class="line">fig = dict(data=data)</span><br><span class="line">py.offline.plot(fig, filename=<span class="string">&#x27;simple.html&#x27;</span>)</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p>运行后系统会自动用默认浏览器打开html文件，互动式展现图象。<br><img src="https://img-blog.csdnimg.cn/20200413193942427.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MjQxODU1OQ==,size_16,color_FFFFFF,t_70#pic_center" alt="在这里插入图片描述"><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;若想改变html文件的存储路径，可以直接在<code>plotly.offline.plot()</code>或在<code>plotly.offline.iplot()</code>中的filename中修改，但这样每次都要将路径输入一遍，所以可以采用切换工作目录的方式，以省去不必要的操作，具体做法如下：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> os</span><br><span class="line">os.chdir(<span class="string">&#x27;your filepath&#x27;</span>)</span><br></pre></td></tr></table></figure>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
+<h2 id="柱状图"><a href="#柱状图" class="headerlink" title="柱状图"></a>柱状图</h2><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;柱状图的图轨数据结构与散点图的相似，这里用<code>plotly.graph_objs.Bar()</code>函数创建图轨数据。经上面的方法绘制图象。</p>
+<p>==<strong>Tips：关于DataFrame类型的数据</strong>==</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;DataFrame中存储的数据类型为<strong>系列</strong>（series），而Plotly图轨数据类型要求为<strong>列表</strong>（list）。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">In[<span class="number">16</span>]: type(df3[<span class="string">&#x27;Price&#x27;</span>])</span><br><span class="line">Out[<span class="number">16</span>]: pandas.core.series.Series</span><br></pre></td></tr></table></figure>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;所以需要用到<code>tolist()</code>函数将其转化成list类型。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">In[<span class="number">17</span>]: type(df3[<span class="string">&#x27;Price&#x27;</span>].tolist())</span><br><span class="line">Out[<span class="number">17</span>]: list</span><br></pre></td></tr></table></figure>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;并且，DataFrame中有索引值和元素值，当我们从DataFrame中取出数据进行柱状图绘制时，一般都是将索引值作为每组的区分。这时就可以用如下方法提取索引值和元素值：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">df[<span class="string">&#x27;row&#x27;</span>,<span class="string">&#x27;column&#x27;</span>].index</span><br><span class="line">df[<span class="string">&#x27;row&#x27;</span>,<span class="string">&#x27;column&#x27;</span>].values</span><br></pre></td></tr></table></figure>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;然后就可以参照散点图的做法进行绘制。</p>
+<p>示例：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">&#x27;&#x27;&#x27;</span></span><br><span class="line"><span class="string">quantity_first10 =</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">Country</span></span><br><span class="line"><span class="string">United Kingdom    4701272</span></span><br><span class="line"><span class="string">Netherlands        200937</span></span><br><span class="line"><span class="string">EIRE               147447</span></span><br><span class="line"><span class="string">Germany            119263</span></span><br><span class="line"><span class="string">France             112104</span></span><br><span class="line"><span class="string">Australia           84209</span></span><br><span class="line"><span class="string">Sweden              36083</span></span><br><span class="line"><span class="string">Switzerland         30630</span></span><br><span class="line"><span class="string">Spain               27951</span></span><br><span class="line"><span class="string">Japan               26016</span></span><br><span class="line"><span class="string"><span class="meta">... </span>...</span></span><br><span class="line"><span class="string">Name: Quantity, dtype: int64</span></span><br><span class="line"><span class="string">&#x27;&#x27;&#x27;</span></span><br><span class="line"><span class="keyword">import</span> plotly <span class="keyword">as</span> py</span><br><span class="line"><span class="keyword">import</span> plotly.graph_objs <span class="keyword">as</span> go</span><br><span class="line"></span><br><span class="line">trace=[go.Bar(x=quantity_first10.index.tolist(),</span><br><span class="line">			  y=quantity_first10.values.tolist(),</span><br><span class="line">			  <span class="comment">#text=quantity_first10.values.tolist(),</span></span><br><span class="line">              <span class="comment">#textposition=&#x27;auto&#x27;,		#数据标签</span></span><br><span class="line">              marker=dict(color=<span class="string">&#x27;orange&#x27;</span>),opacity=<span class="number">0.5</span>)]</span><br><span class="line">              </span><br><span class="line">layout=go.Layout(title=<span class="string">&#x27;购买商品数前十的国家&#x27;</span>,xaxis=dict(title=<span class="string">&#x27;Country&#x27;</span>))</span><br><span class="line"></span><br><span class="line">figure=go.Figure(data=trace,layout=layout)</span><br><span class="line">py.offline.plot(figure,auto_open=<span class="literal">True</span>)</span><br></pre></td></tr></table></figure>
+<p>运行后系统会自动用默认浏览器打开html文件，互动式展现图象。<br><img src="https://img-blog.csdnimg.cn/20200413211647177.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MjQxODU1OQ==,size_16,color_FFFFFF,t_70#pic_center" alt="在这里插入图片描述"><br>当然也可以加上另一个图轨一起绘制：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">&#x27;&#x27;&#x27;</span></span><br><span class="line"><span class="string">Pricesum =</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">Country</span></span><br><span class="line"><span class="string">Australia               1.385213e+05</span></span><br><span class="line"><span class="string">Austria                 1.019868e+04</span></span><br><span class="line"><span class="string">Bahrain                 7.541400e+02</span></span><br><span class="line"><span class="string">Belgium                 4.119634e+04</span></span><br><span class="line"><span class="string">Brazil                  1.143600e+03</span></span><br><span class="line"><span class="string">Canada                  3.666380e+03</span></span><br><span class="line"><span class="string">Channel Islands         2.045044e+04</span></span><br><span class="line"><span class="string">Cyprus                  1.359038e+04</span></span><br><span class="line"><span class="string">Czech Republic          8.267400e+02</span></span><br><span class="line"><span class="string"><span class="meta">... </span>...</span></span><br><span class="line"><span class="string">Name: Price, dtype: float64</span></span><br><span class="line"><span class="string">&#x27;&#x27;&#x27;</span></span><br><span class="line">trace=go.Bar(x=quantity_first10.index.tolist(),</span><br><span class="line">			 y=quantity_first10.values.tolist(),</span><br><span class="line">             marker=dict(color=<span class="string">&#x27;orange&#x27;</span>),opacity=<span class="number">0.5</span>,</span><br><span class="line">             name=<span class="string">&#x27;quantity first 10&#x27;</span>)</span><br><span class="line">trace0=go.Bar(x=quantity_first10.index.tolist(),</span><br><span class="line">			  y=Pricesum[quantity_first10.index].tolist(),</span><br><span class="line">              marker=dict(color=<span class="string">&#x27;blue&#x27;</span>),opacity=<span class="number">0.5</span>,</span><br><span class="line">              name=<span class="string">&#x27;price of the quantity first 10&#x27;</span>)</span><br><span class="line"></span><br><span class="line">layout=go.Layout(title=<span class="string">&#x27;购买商品数前十的国家及其销售额&#x27;</span>,xaxis=dict(title=<span class="string">&#x27;Country&#x27;</span>))</span><br><span class="line"></span><br><span class="line">figure=go.Figure(data=[trace,trace0],layout=layout)</span><br><span class="line">py.offline.plot(figure,auto_open=<span class="literal">True</span>)</span><br></pre></td></tr></table></figure>
+<p>结果如下：<br><img src="https://img-blog.csdnimg.cn/20200413213853275.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MjQxODU1OQ==,size_16,color_FFFFFF,t_70#pic_center" alt="在这里插入图片描述"><br>还可以设置Layout中的参数<code>barmode</code>，将其设为<code>stack</code>，即<code>barmode=&#39;stack&#39;</code>可以得到如下堆叠效果：<br><img src="https://img-blog.csdnimg.cn/202004132201180.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MjQxODU1OQ==,size_16,color_FFFFFF,t_70#pic_center" alt="在这里插入图片描述"><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
+<h2 id="直方图"><a href="#直方图" class="headerlink" title="直方图"></a>直方图</h2><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;用<code>plotly.graph_objs.Histogram()</code>函数创建图轨数据。</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;直方图的绘制无非就是想统计各区间数据的频数或频率，所以常用到的参数也并不多，这里列举几项增加的参数如下：</p>
+<p>==<em>更多参数参照<a target="_blank" rel="noopener" href="https://www.baidu.com/link?url=LYgSDzIatohwZv94t33-7nLVwQKkKNydsNCcZgGE8gp24i0TagSDQBriURYlilDb9vj3PItZe9NzwvYCjkG40iZ-oNAoqNeNvuEd33Jnfwq&wd=&eqid=e6d2dccd000390af000000065e947e50">此帖</a></em>==</p>
+<table>
+<thead>
+<tr>
+<th>直方图特有的参数</th>
+<th>参数含义</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>histnorm</td>
+<td>设置纵坐标显示格式；”probability”表示落入区间的样本频率；”probability density”时每个小矩形的面积为落入区间的样本占总体的比例，所有面积值相加为1</td>
+</tr>
+<tr>
+<td>direction</td>
+<td>设置累积方向，确定频率是从1～0(降序)，还是从0～1(升序)</td>
+</tr>
+<tr>
+<td>autobinx</td>
+<td>bool类型；是否自动划分区间</td>
+</tr>
+<tr>
+<td>nbinsx</td>
+<td>设置划分区间</td>
+</tr>
+<tr>
+<td>barmode【Layout参数】</td>
+<td>设置图表的堆叠方式；”overlay”表示重叠直方图；”stack”表示层叠直方图</td>
+</tr>
+</tbody></table>
+<p>示例：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"></span><br><span class="line">s1 = np.random.RandomState(<span class="number">1</span>)</span><br><span class="line">x = s1.randn(<span class="number">1000</span>)</span><br><span class="line"></span><br><span class="line">trace = go.Histogram(x = x,</span><br><span class="line">                     histnorm = <span class="string">&#x27;probability&#x27;</span>,</span><br><span class="line">                     nbinsx=<span class="number">50</span>)</span><br><span class="line"></span><br><span class="line">data=[trace]</span><br><span class="line">fig = dict(data=data)</span><br><span class="line">py.offline.plot(fig, filename=<span class="string">&#x27;simple.html&#x27;</span>)</span><br></pre></td></tr></table></figure>
+<p>附上<code>randn()</code>的说明：</p>
+<blockquote>
+<p><strong>numpy.random.randn(d0,d1,…,dn)</strong><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>用法同np.random.rand()一样，只是服从正态分布。<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>标准正态分布又称为u分布，是以0为均值、以1为标准差的正态分布，记为N（0，1）。<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
+<ul>
+<li>randn函数返回一个或一组样本，具有<strong>标准正态分布</strong>。<ul>
+<li>dn表格每个维度</li>
+<li>返回值为指定维度的array</li>
+</ul>
+</li>
+</ul>
+</blockquote>
+<p>结果如下：<br><img src="https://img-blog.csdnimg.cn/20200413231638563.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MjQxODU1OQ==,size_16,color_FFFFFF,t_70#pic_center" alt="在这里插入图片描述"></p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
+<h2 id="饼图-环形图"><a href="#饼图-环形图" class="headerlink" title="饼图/环形图"></a>饼图/环形图</h2><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;用<code>plotly.graph_objs.Pie()</code>函数创建图轨数据。</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;常用参数如下：</p>
+<p>==<em>更多参数参照<a target="_blank" rel="noopener" href="https://www.baidu.com/link?url=LYgSDzIatohwZv94t33-7nLVwQKkKNydsNCcZgGE8gp24i0TagSDQBriURYlilDb9vj3PItZe9NzwvYCjkG40iZ-oNAoqNeNvuEd33Jnfwq&wd=&eqid=e6d2dccd000390af000000065e947e50">此帖</a></em>==</p>
+<table>
+<thead>
+<tr>
+<th>饼图/环形图特有参数</th>
+<th>参数含义</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>values</td>
+<td>每个扇区的数值大小</td>
+</tr>
+<tr>
+<td>labels</td>
+<td>list类型； 饼图中每一个扇区的文本标签</td>
+</tr>
+<tr>
+<td>hole</td>
+<td>环形饼图空白内径的半径，取值0～1。默认值为0，参数是与外径的比值</td>
+</tr>
+</tbody></table>
+<p>可见，要创建环形图可以通过改变hole参数实现。</p>
+<p>示例：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">trace=go.Pie(labels=[<span class="string">&#x27;Windows&#x27;</span>, <span class="string">&#x27;Linux&#x27;</span>, <span class="string">&#x27;Unix&#x27;</span>, <span class="string">&#x27;MacOS&#x27;</span>, <span class="string">&#x27;Android&#x27;</span>, <span class="string">&#x27;iOS&#x27;</span>],</span><br><span class="line">             values=[<span class="number">280</span>, <span class="number">25</span>, <span class="number">10</span>, <span class="number">100</span>, <span class="number">250</span>, <span class="number">270</span>],</span><br><span class="line">             hole=<span class="number">0.2</span>,</span><br><span class="line">             textfont=dict(size=<span class="number">12</span>,color=<span class="string">&#x27;white&#x27;</span>))</span><br><span class="line">data=[trace]</span><br><span class="line">fig = dict(data=data)</span><br><span class="line">py.offline.plot(fig, filename=<span class="string">&#x27;simple.html&#x27;</span>)</span><br></pre></td></tr></table></figure>
+
+<p>结果如下：<br><img src="https://img-blog.csdnimg.cn/20200413233615702.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MjQxODU1OQ==,size_16,color_FFFFFF,t_70#pic_center" alt="在这里插入图片描述"><br>这里附上<a target="_blank" rel="noopener" href="https://www.jianshu.com/p/27f792db66ff">matplotlib库的饼图绘制方法</a>，重点关注饼片的分隔explode。</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
+<h2 id="箱线图"><a href="#箱线图" class="headerlink" title="箱线图"></a>箱线图</h2><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;箱线图主要包含六个数据节点，将一组数据从大到小排列，分别计算出他的上边缘，上四分位数Q3，中位数，下四分位数Q1，下边缘，还有一个异常值。<br><img src="https://img-blog.csdnimg.cn/20200414123001727.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MjQxODU1OQ==,size_16,color_FFFFFF,t_70#pic_center" alt="在这里插入图片描述"><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;箱线图的图轨数据绘制可以通过<code>plotly.graph_objs.Box()</code>函数实现。<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>示例：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"></span><br><span class="line">y0 = np.random.randn(<span class="number">50</span>) - <span class="number">1</span></span><br><span class="line">y1 = np.random.randn(<span class="number">50</span>) + <span class="number">1</span></span><br><span class="line"><span class="comment"># 生成两个随机集合</span></span><br><span class="line"></span><br><span class="line">trace0 = go.Box(</span><br><span class="line">    y=y0</span><br><span class="line">)</span><br><span class="line">trace1 = go.Box(</span><br><span class="line">    y=y1</span><br><span class="line">)</span><br><span class="line">data = [trace0, trace1]</span><br><span class="line">py.offline.plot(data)</span><br></pre></td></tr></table></figure>
+
+<p>结果如下：<br><img src="https://img-blog.csdnimg.cn/20200414123648583.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MjQxODU1OQ==,size_16,color_FFFFFF,t_70#pic_center" alt="在这里插入图片描述"><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
+<h2 id="热力图"><a href="#热力图" class="headerlink" title="热力图"></a>热力图</h2><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;热图是无监督聚类的一种，利用热力图可以看数据表里多个特征两两的相似度。</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;箱线图的图轨数据绘制可以通过<code>plotly.graph_objs.Heatmap()</code>函数实现。</p>
+<p>示例：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">trace=go.Heatmap(</span><br><span class="line">    z=[</span><br><span class="line">        [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>],</span><br><span class="line">        [<span class="number">5</span>,<span class="number">6</span>,<span class="number">7</span>,<span class="number">8</span>]</span><br><span class="line">    ]</span><br><span class="line">)</span><br><span class="line">data=[trace]</span><br><span class="line">py.offline.plot(data)</span><br></pre></td></tr></table></figure>
+<p>结果如下：<br><img src="https://img-blog.csdnimg.cn/20200414124806542.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MjQxODU1OQ==,size_16,color_FFFFFF,t_70#pic_center" alt="在这里插入图片描述"><br>==<em>热力图的更多参数解释和说明（基于seaborn库）</em>== 见此文章——<a target="_blank" rel="noopener" href="https://blog.csdn.net/cymy001/article/details/79576019">相关系数矩阵与热力图heatmap(Python高级可视化库seaborn)</a></p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
+<h1 id="拓展——颜色渐变"><a href="#拓展——颜色渐变" class="headerlink" title="拓展——颜色渐变"></a>拓展——颜色渐变</h1><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;设温度在-50和+50摄氏度之间，而rgb颜色值为0到255，所以可以得出映射关系。</p>
+<p>示例：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">get_color</span>(<span class="params">temp</span>):</span></span><br><span class="line">    <span class="keyword">return</span> <span class="string">&#x27;rgb(&#123;r&#125;, 0, &#123;b&#125;)&#x27;</span>.format(</span><br><span class="line">        r=(temp+<span class="number">50</span>)/<span class="number">100</span>*<span class="number">255</span>,</span><br><span class="line">        b=(<span class="number">1</span>-(temp+<span class="number">50</span>)/<span class="number">100</span>)*<span class="number">255</span></span><br><span class="line">    )</span><br><span class="line"></span><br><span class="line">temps = [<span class="number">-11</span>, <span class="number">16</span>, <span class="number">48</span>, <span class="number">3</span>, <span class="number">18</span>, <span class="number">4</span>, <span class="number">-45</span>, <span class="number">-2</span>, <span class="number">21</span>, <span class="number">36</span>, <span class="number">4</span>, <span class="number">-37</span>, <span class="number">37</span>, <span class="number">19</span>, <span class="number">-47</span>, <span class="number">-1</span>, <span class="number">27</span>, <span class="number">44</span>, <span class="number">37</span>, <span class="number">-32</span>, <span class="number">11</span>, <span class="number">-20</span>, <span class="number">-46</span>, <span class="number">-30</span>, <span class="number">-46</span>, <span class="number">47</span>, <span class="number">25</span>, <span class="number">28</span>, <span class="number">13</span>, <span class="number">23</span>, <span class="number">-3</span>] <span class="comment">#温度列表</span></span><br><span class="line"></span><br><span class="line">scatter = go.Scatter(</span><br><span class="line">    name=<span class="string">&#x27;平均温度&#x27;</span>,</span><br><span class="line">    x=[<span class="string">&#x27;&#123;&#125;日&#x27;</span>.format(n) <span class="keyword">for</span> n <span class="keyword">in</span> range(<span class="number">1</span>, <span class="number">32</span>)],</span><br><span class="line">    y=temps,</span><br><span class="line">    mode=<span class="string">&#x27;markers&#x27;</span>,</span><br><span class="line">    marker = &#123;</span><br><span class="line">        <span class="string">&#x27;color&#x27;</span>: [get_color(temp) <span class="keyword">for</span> temp <span class="keyword">in</span> temps],</span><br><span class="line">        <span class="string">&#x27;size&#x27;</span>: <span class="number">10</span>,</span><br><span class="line">    &#125;,</span><br><span class="line">)</span><br><span class="line">fig = go.Figure(data=[scatter])</span><br><span class="line">py.offline.plot(fig, filename=<span class="string">&#x27;simple.html&#x27;</span>)</span><br></pre></td></tr></table></figure>
+<p>结果如下：<br><img src="https://img-blog.csdnimg.cn/20200413234125495.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MjQxODU1OQ==,size_16,color_FFFFFF,t_70#pic_center" alt="在这里插入图片描述"><br>*==更多示例见此<a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/77368651">链接</a>==*</p>
+
+            <div class="clearfix"></div>
+
+<hr class="nogutter">
+     <div>    
+      <ul class="post-copyright">
+         <li class="post-copyright-link">
+          <strong>本文作者：</strong>
+          <a href="/" title="欢迎访问 Zing_zyy 的个人博客">Zing_zyy</a>
+        </li>
+
+        <li class="post-copyright-link">
+          <strong>本文标题：</strong>
+          <a href="https://zing1116.github.io/2020/04/13/plotly/" title="Plotly学习笔记">Plotly学习笔记</a>
+        </li>
+
+        <li class="post-copyright-link">
+          <strong>本文链接：</strong>
+          <a href="https://zing1116.github.io/2020/04/13/plotly/" title="Plotly学习笔记">https://zing1116.github.io/2020/04/13/plotly/</a>
+        </li>
+
+        <li class="post-copyright-date">
+            <strong>发布时间：</strong>2020年4月13日 - 21时04分
+        </li>  
+
+        <li class="post-copyright-license">
+          <strong>版权声明： </strong>
+          本文由 Zing_zyy 原创，采用 <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/deed.zh" rel="license" target="_blank">保留署名-非商业性使用-禁止演绎 4.0-国际许可协议</a> </br>转载请保留以上声明信息！
+        </li>
+      </ul>
+  </div>
+
+            <hr class="nogutter">
+            <div id="vcomments"></div>
+    <script>
+        new Valine({
+            el: '#vcomments',
+            appId: 'LHBhPs5Plo7M9AGvQC707ITS-9Nh9j0Va',
+            appKey: 'SLxrX8osHTNKoBYdrX1SkEpf',
+            placeholder: '可以匿名评论噢~',
+            visitor: true,
+            avatar: 'wavatar',
+            recordIP: true,
+            serverURLs: 'https://zing1116.works',
+        })
+    </script>
+
+        </div>
+        <nav class="m-pagination col-md-8 col-md-offset-2 col-sm-24" role="pagination">
+    
+    <a class="pull-left" href="/2021/03/09/toohi/" style="float: left;">
+        ← 囀る4小册子 「遠火」
+    </a>
+    
+    
+    <a class="pull-right" href="/2020/03/22/tieba/">
+        Python爬取贴吧图片（含urllib库和requests库的两种爬取方式） →
+    </a>
+    
+</nav>
+
+        
+</section>
+
+
+      
+<!-- ============================ Footer =========================== -->
+
+<footer>
+    <div class="container">
+            <div class="copy">
+                
+                
+                
+        <!-- 不蒜子统计 -->
+        <span id="busuanzi_container_site_pv">
+                本站总访问量<span id="busuanzi_value_site_pv"></span>次
+        </span>
+        <span class="post-meta-divider">|</span>
+        <span id="busuanzi_container_site_uv" style='display:none'>
+                本站访客数<span id="busuanzi_value_site_uv"></span>人
+        </span>
+        <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+  
+                <p>
+                    &copy; 2014<script>new Date().getFullYear()>2010&&document.write("-"+new Date().getFullYear());</script>, Content By Zing_zyy. All Rights Reserved.
+                </p>
+            </div>
+            <div class="social">
+                <ul>
+                    
+                    <li><a href="https://github.com/zing1116" title="Github" target="_blank"><i class="icon-github-footer"></i></a>&nbsp;&nbsp;&nbsp;</li>
+                    
+                    
+                    <li><a href="https://blog.csdn.net/weixin_42418559" title="CSDN" target="_blank"><i class="icon-csdn-footer"></i></a>&nbsp;&nbsp;&nbsp;</li>
+                    
+                    
+                    <li><a target="_blank"><i class="icon-qq-footer"></i></a>&nbsp;&nbsp;&nbsp;</li>
+                    
+                    
+                    <li><a target="_blank"><i class="icon-wechat-footer"></i></a>&nbsp;&nbsp;&nbsp;</li>
+                    
+                </ul>
+            </div>
+            <div class="clearfix"> </div>
+        </div>
+</footer>
+
+<!-- ============================ END Footer =========================== -->
+      <!-- Load our scripts -->
+<!-- Resizable 'on-demand' full-height hero -->
+<script type="text/javascript">
+    var resizeHero = function () {
+        var hero = $(".cover,.heightblock"),
+            window1 = $(window);
+        hero.css({
+            "height": window1.height()
+        });
+    };
+
+    resizeHero();
+
+    $(window).resize(function () {
+        resizeHero();
+    });
+</script>
+<script src="/js/plugins.min.js"></script><!-- Bootstrap core and concatenated plugins always load here -->
+<script src="/js/scripts.js"></script><!-- Theme scripts -->
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+$('#intro').find('img').each(function(){
+  var alt = this.alt;
+
+  if (alt){
+    $(this).after('<span class="caption" style="display:none">' + alt + '</span>');
+  }
+
+  $(this).wrap('<a href="' + this.src + '" title="' + alt + '" class="fancybox" rel="gallery" />');
+});
+(function($){
+  $('.fancybox').fancybox();
+})(jQuery);
+</script>
+
+
+
+      
+            <style>
+.local-search-popup {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  background: rgba(255, 255, 255, .9);
+  color: #333;
+  z-index: 9999;
+  border-radius: 5px;
+  overflow: scroll;
+}
+#local-search-input {
+  width: 100%;
+  border: none;
+  outline: none;
+  border-bottom: 1px solid #151515;
+  background-color: initial;
+}
+.search-result-list {
+  list-style: none;
+  padding-left: 0;
+}
+.search-result-list > li {
+  margin-top: 15px;
+  border-bottom: 1px solid #ddd;
+  transition: all ease .3s;
+}
+.search-result-list > li:hover {
+  border-bottom: 1px solid gray;
+}
+.search-result-title {
+  font-size: 16px;
+}
+.search-result {
+  line-height: 20px;
+}
+.search-keyword {
+  font-weight: normal;
+  color: #c00;
+}
+
+@media (min-width: 890px) {
+  .popup-btn-close {
+    position: absolute;
+    top: 15px;
+    left: 35px;
+    border: 1px solid #151515;
+    padding: 0px 10px;
+    border-top-left-radius: 8px;
+    cursor: pointer;
+    transition: all ease .3s;
+  }
+  .popup-btn-close:hover {
+    background: #151515;
+    opacity: .9;
+    color: #fff;
+  }
+}
+@media (max-width: 890px) {
+  .popup-btn-close {
+    font-size: 0;
+    position: fixed;
+    right: 20px;
+    bottom: 50px;
+    width: 50px;
+    height: 50px;
+    background: #fff;
+    border-radius: 50%;
+    box-shadow: 1px 1px 5px #888;
+    cursor: pointer;
+  }
+  .popup-btn-close::after {
+    content: '←';
+    color: #151515;
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-size: 20px;
+    width: 100%;
+    height: 100%;
+    line-height: 50px;
+    text-align: center;
+  }
+}
+</style>
+
+<div class="popup search-popup local-search-popup">
+  <span class="popup-btn-close">
+    ESC
+  </span>
+  <div class="container">
+    <div class="col-md-8 col-md-offset-2">
+      <div class="local-search-header clearfix">
+        <span class="search-icon">
+          <i class="fa fa-search"></i>
+        </span>
+        <div class="local-search-input-wrapper">
+          <input autocomplete="off" placeholder="Search..." type="text" id="local-search-input">
+        </div>
+      </div>
+      <div id="local-search-result"></div>
+    </div>
+  </div>
+</div>
+
+<script src="/js/ziploader.js"></script>
+
+
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.json";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    // monitor main search box;
+
+    var onPopupClose = function (e) {
+      $('.popup').fadeOut(300);
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $('.popup').fadeIn(300);
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+
+    // get search zip version
+    $.get('/searchVersion.txt?t=' + (+new Date()), function(res) {
+      if (localStorage.getItem('searchVersion') !== res) {
+        localStorage.setItem('searchVersion', res);
+        initSearchJson();
+      }
+    });
+
+    function initSearchJson () {
+      initLoad(['/search.zip'], {
+        loadOptions: {
+          success: function(obj) {
+            localStorage.setItem('searchJson', obj['search.json'])
+          },
+          error: function(e) {
+            return console.log(e)
+          }
+        },
+        returnOptions: {
+          'json': TYPE_TEXT
+        },
+        mimeOptions:{
+          'json':'application/json'
+        }
+      })
+    }
+
+
+    // search function;
+    var searchFunc = function(search_id, content_id) {
+      'use strict';
+
+      isfetched = true;
+      var datas = JSON.parse(localStorage.getItem('searchJson'));
+      console.log(search_id)
+      var input = document.getElementById(search_id);
+      var resultContent = document.getElementById(content_id);
+      var inputEventFunction = function() {
+        var searchText = input.value.trim().toLowerCase();
+        var keywords = searchText.split(/[\s\-]+/);
+        if (keywords.length > 1) {
+          keywords.push(searchText);
+        }
+        var resultItems = [];
+        if (searchText.length > 0) {
+          // perform local searching
+          datas.forEach(function(data) {
+            var isMatch = false;
+            var hitCount = 0;
+            var searchTextCount = 0;
+            var title = data.title ? data.title.trim() : '';
+            var titleInLowerCase = title.toLowerCase();
+            var content = data.content ? data.content.trim().replace(/<[^>]+>/g,"") : '';
+            var contentInLowerCase = content.toLowerCase();
+            var articleUrl = decodeURIComponent(data.url);
+            var indexOfTitle = [];
+            var indexOfContent = [];
+            // only match articles with not empty titles
+            keywords.forEach(function(keyword) {
+              function getIndexByWord(word, text, caseSensitive) {
+                var wordLen = word.length;
+                if (wordLen === 0) {
+                  return [];
+                }
+                var startPosition = 0, position = [], index = [];
+                if (!caseSensitive) {
+                  text = text.toLowerCase();
+                  word = word.toLowerCase();
+                }
+                while ((position = text.indexOf(word, startPosition)) > -1) {
+                  index.push({position: position, word: word});
+                  startPosition = position + wordLen;
+                }
+                return index;
+              }
+
+              indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+              indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+            });
+            if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+              isMatch = true;
+              hitCount = indexOfTitle.length + indexOfContent.length;
+            }
+
+            // show search results
+
+            if (isMatch) {
+              // sort index by position of keyword
+
+              [indexOfTitle, indexOfContent].forEach(function (index) {
+                index.sort(function (itemLeft, itemRight) {
+                  if (itemRight.position !== itemLeft.position) {
+                    return itemRight.position - itemLeft.position;
+                  } else {
+                    return itemLeft.word.length - itemRight.word.length;
+                  }
+                });
+              });
+
+              // merge hits into slices
+
+              function mergeIntoSlice(text, start, end, index) {
+                var item = index[index.length - 1];
+                var position = item.position;
+                var word = item.word;
+                var hits = [];
+                var searchTextCountInSlice = 0;
+                while (position + word.length <= end && index.length != 0) {
+                  if (word === searchText) {
+                    searchTextCountInSlice++;
+                  }
+                  hits.push({position: position, length: word.length});
+                  var wordEnd = position + word.length;
+
+                  // move to next position of hit
+
+                  index.pop();
+                  while (index.length != 0) {
+                    item = index[index.length - 1];
+                    position = item.position;
+                    word = item.word;
+                    if (wordEnd > position) {
+                      index.pop();
+                    } else {
+                      break;
+                    }
+                  }
+                }
+                searchTextCount += searchTextCountInSlice;
+                return {
+                  hits: hits,
+                  start: start,
+                  end: end,
+                  searchTextCount: searchTextCountInSlice
+                };
+              }
+
+              var slicesOfTitle = [];
+              if (indexOfTitle.length != 0) {
+                slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+              }
+
+              var slicesOfContent = [];
+              while (indexOfContent.length != 0) {
+                var item = indexOfContent[indexOfContent.length - 1];
+                var position = item.position;
+                var word = item.word;
+                // cut out 100 characters
+                var start = position - 20;
+                var end = position + 80;
+                if(start < 0){
+                  start = 0;
+                }
+                if (end < position + word.length) {
+                  end = position + word.length;
+                }
+                if(end > content.length){
+                  end = content.length;
+                }
+                slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+              }
+
+              // sort slices in content by search text's count and hits' count
+
+              slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                  return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                  return sliceRight.hits.length - sliceLeft.hits.length;
+                } else {
+                  return sliceLeft.start - sliceRight.start;
+                }
+              });
+
+              // select top N slices in content
+
+              var upperBound = parseInt('2');
+              if (upperBound >= 0) {
+                slicesOfContent = slicesOfContent.slice(0, upperBound);
+              }
+
+              // highlight title and content
+
+              function highlightKeyword(text, slice) {
+                var result = '';
+                var prevEnd = slice.start;
+                slice.hits.forEach(function (hit) {
+                  result += text.substring(prevEnd, hit.position);
+                  var end = hit.position + hit.length;
+                  result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                  prevEnd = end;
+                });
+                result += text.substring(prevEnd, slice.end);
+                return result;
+              }
+
+              var resultItem = '';
+
+              if (slicesOfTitle.length != 0) {
+                resultItem += "<li><a target='_blank' href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
+              } else {
+                resultItem += "<li><a target='_blank' href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
+              }
+
+              slicesOfContent.forEach(function (slice) {
+                resultItem += "<a target='_blank' href='" + articleUrl + "'>" +
+                  "<p class=\"search-result\">" + highlightKeyword(content, slice) +
+                  "...</p>" + "</a>";
+              });
+
+              resultItem += "</li>";
+              resultItems.push({
+                item: resultItem,
+                searchTextCount: searchTextCount,
+                hitCount: hitCount,
+                id: resultItems.length
+              });
+            }
+          })
+        };
+        if (keywords.length === 1 && keywords[0] === "") {
+          resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>'
+        } else if (resultItems.length === 0) {
+          resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>'
+        } else {
+          resultItems.sort(function (resultLeft, resultRight) {
+            if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+              return resultRight.searchTextCount - resultLeft.searchTextCount;
+            } else if (resultLeft.hitCount !== resultRight.hitCount) {
+              return resultRight.hitCount - resultLeft.hitCount;
+            } else {
+              return resultRight.id - resultLeft.id;
+            }
+          });
+          var searchResultList = '<ul class=\"search-result-list\">';
+          resultItems.forEach(function (result) {
+            searchResultList += result.item;
+          })
+          searchResultList += "</ul>";
+          resultContent.innerHTML = searchResultList;
+        }
+      }
+
+      if ('auto' === 'auto') {
+        input.addEventListener('input', inputEventFunction);
+      } else {
+        $('.search-icon').click(inputEventFunction);
+        input.addEventListener('keypress', function (event) {
+          if (event.keyCode === 13) {
+            inputEventFunction();
+          }
+        });
+      }
+
+      // remove loading animation
+      $('body').css('overflow', '');
+
+      proceedsearch();
+    }
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        $('.sb-close').click();
+        searchFunc('local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+  </script>
+
+
+      
+</body>
+</html>
